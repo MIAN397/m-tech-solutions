@@ -1,0 +1,36 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Dependencies & Build
+node_modules
+dist
+dist-ssr
+*.local
+
+# Environment & Sensitive Files
+.env
+.env.*
+!.env.example
+
+# Firebase
+.firebase
+firebase-debug.log*
+firestore-debug.log*
+ui-debug.log*
+
+# Editor & OS files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?

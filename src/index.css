@@ -1,0 +1,287 @@
+@import "tailwindcss";
+
+@theme {
+  --color-dark: var(--bg-primary);
+  --color-dark-secondary: var(--bg-secondary);
+  --color-dark-card: var(--card-bg);
+  --color-dark-hover: var(--card-hover);
+  --color-text-main: var(--text-primary);
+  --color-text-sub: var(--text-secondary);
+  --color-border-main: var(--border-color);
+
+  --color-accent: #0066ff;
+  --color-accent-blue: #2f57ff;
+  --color-accent-silver: var(--text-secondary);
+  --color-accent-lightBlue: #e5efff;
+
+  --font-display: "Syne", sans-serif;
+  --font-sans: "Plus Jakarta Sans", sans-serif;
+
+  --animate-spin-slow: spin 12s linear infinite;
+}
+
+:root {
+  --bg-primary: #08080a;
+  --bg-secondary: #121216;
+  --card-bg: #181820;
+  --card-hover: #22222d;
+  --text-primary: #ffffff;
+  --text-secondary: #8e8e93;
+  --border-color: rgba(255, 255, 255, 0.05);
+  --nav-bg: rgba(8, 8, 10, 0.65);
+  
+  /* Cursor Variables */
+  --cursor-ring-color: rgba(255, 255, 255, 0.25);
+  --cursor-magnetic-bg: rgba(255, 255, 255, 1);
+  --cursor-dot-bg: #2f57ff;
+  --cursor-view-bg: #2f57ff;
+  --cursor-footer-bg: #ffffff;
+}
+
+html.light {
+  --bg-primary: #f5f5f7;
+  --bg-secondary: #e8e8ed;
+  --card-bg: #ffffff;
+  --card-hover: #f0f0f5;
+  --text-primary: #08080a;
+  --text-secondary: #515154;
+  --border-color: rgba(0, 0, 0, 0.08);
+  --nav-bg: rgba(245, 245, 247, 0.65);
+  
+  /* Cursor Variables */
+  --cursor-ring-color: rgba(0, 0, 0, 0.2);
+  --cursor-magnetic-bg: rgba(0, 0, 0, 1);
+  --cursor-dot-bg: #2f57ff;
+  --cursor-view-bg: #2f57ff;
+  --cursor-footer-bg: #000000;
+}
+
+:root {
+  color-scheme: dark;
+}
+
+html.light {
+  color-scheme: light;
+}
+
+/* Hide default cursor on devices that support hover */
+@media (hover: hover) {
+  html, body, a, button, select, input, textarea, [role="button"], [data-cursor] {
+    cursor: none !important;
+  }
+}
+
+/* Inertial Scrolling and smooth defaults */
+html, body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--card-bg);
+  border-radius: 9999px;
+  transition: background 0.3s ease;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #2f57ff;
+}
+
+/* Analog Noise Overlay for premium texture */
+.noise-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  content: "";
+  opacity: 0.02;
+  pointer-events: none;
+  z-index: 9999;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+
+/* Text Masking & Premium Gradients */
+.text-gradient {
+  background: linear-gradient(135deg, var(--text-primary) 40%, var(--text-secondary) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-gradient-accent {
+  background: linear-gradient(135deg, #2f57ff 0%, #00d2ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Custom Glassmorphism effects */
+.glass-card {
+  background: var(--card-bg);
+  opacity: 0.95;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--border-color);
+  transition: background-color 0.4s ease, border-color 0.4s ease;
+}
+
+.glass-nav {
+  background: var(--nav-bg);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border-color);
+  transition: background-color 0.4s ease, border-color 0.4s ease;
+}
+
+/* Bento Grid custom hover glow */
+.bento-glow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(600px circle at var(--mouse-x, 0px) var(--mouse-y, 0px), var(--glow-color, rgba(47, 87, 255, 0.08)), transparent 40%);
+  z-index: 2;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.bento-card:hover .bento-glow {
+  opacity: 1;
+}
+
+/* Bento card image overlay */
+.bento-image-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    var(--bg-primary) 0%,
+    color-mix(in srgb, var(--bg-primary) 92%, transparent) 45%,
+    color-mix(in srgb, var(--bg-primary) 40%, transparent) 100%
+  );
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Custom utility for ScrollTrigger text reveal */
+.char-reveal {
+  opacity: 0.15;
+  transition: opacity 0.1s ease;
+}
+
+.char-reveal.active {
+  opacity: 1;
+}
+
+/* Magnetic button layout resets */
+.magnetic-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+/* Font Smoothing overrides */
+body {
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Print Media Styles for Official Quotation PDFs */
+@media print {
+  @page {
+    size: A4 portrait;
+    margin: 0;
+  }
+
+  html, body {
+    background: #ffffff !important;
+    color: #000000 !important;
+    cursor: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    height: auto !important;
+    min-height: 0 !important;
+    overflow: visible !important;
+  }
+
+  /* Force all parent containers to be unconstrained */
+  #root, div, main, section, article {
+    overflow: visible !important;
+    height: auto !important;
+    max-height: none !important;
+  }
+
+  /* Hide noise background, cursor, navbar, header, footer, modals, form inputs */
+  .noise-bg, 
+  .no-print,
+  #custom-cursor,
+  header,
+  nav,
+  footer {
+    display: none !important;
+  }
+
+  /* Hide everything inside body by default */
+  body * {
+    visibility: hidden !important;
+  }
+
+  /* Make ONLY print-area and its children visible */
+  .print-area,
+  .print-area * {
+    visibility: visible !important;
+  }
+
+  /* Absolute position print-area to top-left of page */
+  .print-area {
+    position: absolute !important;
+    left: 0 !important;
+    top: 0 !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-shadow: none !important;
+    background: #ffffff !important;
+  }
+
+  .pdf-page {
+    box-shadow: none !important;
+    border: none !important;
+    margin: 0 auto !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 10mm 12mm !important;
+    background: #ffffff !important;
+    color: #0f172a !important;
+    page-break-after: always !important;
+    break-after: page !important;
+  }
+
+  .page-break {
+    page-break-before: always !important;
+    break-before: page !important;
+  }
+
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+}
+
+
