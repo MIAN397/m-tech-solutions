@@ -37,7 +37,7 @@ export default function Hero() {
     const waves = Array.from({ length: waveCount }, (_, idx) => ({
       y: height / 2,
       length: 0.001 + idx * 0.0005,
-      amplitude: 50 + idx * 15,
+      amplitude: 40 + idx * 12,
       frequency: 0.02 + idx * 0.005,
       opacity: 0.03 + (waveCount - idx) * 0.03,
       phase: idx * 50,
@@ -145,7 +145,7 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative w-full min-h-screen flex flex-col justify-center items-center px-6 md:px-12 overflow-hidden bg-dark"
+      className="relative w-full min-h-screen flex flex-col justify-center items-center px-4 sm:px-6 md:px-12 overflow-hidden bg-dark pt-20 md:pt-0"
     >
       {/* Background Interactive Waves */}
       <canvas ref={canvasRef} className="absolute inset-0 w-full h-full pointer-events-none" />
@@ -153,35 +153,35 @@ export default function Hero() {
       {/* Grid Pattern Details */}
       <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.015)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.015)_1px,transparent_1px)] bg-[size:40px_40px] pointer-events-none" />
 
-      <div className="relative z-10 w-full max-w-6xl flex flex-col items-center text-center mt-12 md:mt-20">
+      <div className="relative z-10 w-full max-w-6xl flex flex-col items-center text-center mt-6 sm:mt-12 md:mt-20">
         {/* Massive Typography Headers */}
-        <h1 className="font-display font-extrabold tracking-tight text-text-main flex flex-col gap-1 md:gap-3 leading-none select-none text-[12vw] sm:text-[9vw] lg:text-[7.5vw] uppercase">
-          <span className="overflow-hidden block py-1">
+        <h1 className="font-display font-extrabold tracking-tight text-text-main flex flex-col gap-1 md:gap-3 leading-tight sm:leading-none select-none text-[11vw] sm:text-[9vw] lg:text-[7.5vw] uppercase">
+          <span className="overflow-hidden block py-0.5 sm:py-1">
             <span className="hero-title-line inline-block">We Shape</span>
           </span>
-          <span className="overflow-hidden block py-1 text-gradient-accent">
+          <span className="overflow-hidden block py-0.5 sm:py-1 text-gradient-accent">
             <span className="hero-title-line inline-block">Digital Leaders</span>
           </span>
         </h1>
 
         {/* Supporting Subtitle */}
-        <p className="hero-subhead max-w-xl md:max-w-2xl text-accent-silver text-base md:text-xl font-medium tracking-wide mt-6 md:mt-8 leading-relaxed opacity-0">
+        <p className="hero-subhead max-w-xl md:max-w-2xl text-accent-silver text-sm sm:text-base md:text-xl font-medium tracking-wide mt-4 sm:mt-6 md:mt-8 leading-relaxed opacity-0">
           M-Tech Solutions scales businesses by building high-performance, custom digital products.
-          From enterprise architectures to premium web experiences.
+          From enterprise architectures to premium web & mobile experiences.
         </p>
 
         {/* Explore Button */}
-        <div className="hero-scroll-cta mt-12 md:mt-16 opacity-0">
+        <div className="hero-scroll-cta mt-8 sm:mt-12 md:mt-16 opacity-0">
           <a
             href="#about"
             ref={scrollBtnRef}
             data-cursor="magnetic"
-            className="magnetic-btn w-28 h-28 md:w-32 md:h-32 border border-border-main rounded-full flex flex-col items-center justify-center gap-2 hover:border-accent hover:bg-accent/5 transition-colors duration-300"
+            className="magnetic-btn w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 border border-border-main rounded-full flex flex-col items-center justify-center gap-1.5 sm:gap-2 hover:border-accent hover:bg-accent/5 transition-colors duration-300 active:scale-95"
           >
             <span className="text-[10px] md:text-xs font-bold uppercase tracking-widest text-text-main">
               Explore
             </span>
-            <ArrowDown className="w-4 h-4 text-accent animate-bounce" />
+            <ArrowDown className="w-3.5 h-3.5 md:w-4 md:h-4 text-accent animate-bounce" />
           </a>
         </div>
       </div>

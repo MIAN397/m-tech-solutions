@@ -73,6 +73,7 @@ export default function CustomCursor() {
   if (isMobile || !isVisible) return null;
 
   // Define size, background, and text modifications based on active state
+  // Using translucent glass aura instead of mixBlendMode: difference to ensure text NEVER disappears
   const variants = {
     default: {
       width: 10,
@@ -80,14 +81,17 @@ export default function CustomCursor() {
       backgroundColor: 'var(--cursor-dot-bg)',
       border: '0px solid transparent',
       borderRadius: '50%',
+      backdropFilter: 'none',
+      mixBlendMode: 'normal'
     },
     magnetic: {
-      width: 80,
-      height: 80,
+      width: 72,
+      height: 72,
       backgroundColor: 'var(--cursor-magnetic-bg)',
-      border: '0px solid transparent',
-      mixBlendMode: 'difference',
+      border: '1px solid var(--cursor-magnetic-border)',
       borderRadius: '50%',
+      backdropFilter: 'blur(4px)',
+      mixBlendMode: 'normal'
     },
     view: {
       width: 90,
@@ -95,14 +99,17 @@ export default function CustomCursor() {
       backgroundColor: 'var(--cursor-view-bg)',
       border: '0px solid transparent',
       borderRadius: '50%',
+      backdropFilter: 'none',
+      mixBlendMode: 'normal'
     },
     footer: {
-      width: 120,
-      height: 120,
+      width: 110,
+      height: 110,
       backgroundColor: 'var(--cursor-footer-bg)',
-      border: '0px solid transparent',
-      mixBlendMode: 'difference',
+      border: '1px solid var(--cursor-magnetic-border)',
       borderRadius: '50%',
+      backdropFilter: 'blur(4px)',
+      mixBlendMode: 'normal'
     }
   };
 

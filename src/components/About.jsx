@@ -19,26 +19,24 @@ export default function About() {
 
     // Create wrapper spans for each word
     const wordSpans = [];
-    words.forEach((word, idx) => {
+    words.forEach((word) => {
       const span = document.createElement('span');
       span.className = 'inline-block opacity-15 transition-all duration-300';
       span.textContent = word;
-      textEl.appendChild(span);
-      wordSpans.push(span);
 
-      // Append actual space node between words
-      if (idx < words.length - 1) {
-        textEl.appendChild(document.createTextNode(' '));
-      }
+      // Add a space between words
+      textEl.appendChild(span);
+      textEl.appendChild(document.createTextNode(' '));
+      wordSpans.push(span);
     });
 
-    // GSAP ScrollTrigger timeline to scrub word reveal
+    // Create ScrollTrigger animation for text reveal
     const revealTimeline = gsap.timeline({
       scrollTrigger: {
-        trigger: textEl,
-        start: 'top 85%',
-        end: 'bottom 45%',
-        scrub: true,
+        trigger: containerRef.current,
+        start: 'top 75%',
+        end: 'bottom 50%',
+        scrub: 1,
       },
     });
 
@@ -63,7 +61,7 @@ export default function About() {
     <section
       id="about"
       ref={containerRef}
-      className="relative w-full min-h-[80vh] flex flex-col justify-center items-center py-24 md:py-36 px-6 md:px-12 bg-dark-secondary"
+      className="relative w-full min-h-[80vh] flex flex-col justify-center items-center py-16 sm:py-24 md:py-36 px-4 sm:px-6 md:px-12 bg-dark-secondary"
     >
       <div className="w-full max-w-5xl flex flex-col justify-start">
         {/* Category tag */}
@@ -74,38 +72,13 @@ export default function About() {
           </span>
         </div>
 
+        {/* Scroll-driven typography reveal */}
         <h2
           ref={textRef}
-          className="font-display font-bold leading-normal text-2xl sm:text-4xl md:text-5xl lg:text-[4vw] tracking-tight text-text-main select-none"
+          className="font-display font-extrabold text-xl sm:text-3xl md:text-5xl lg:text-6xl text-text-main leading-snug sm:leading-tight md:leading-tight uppercase tracking-tight select-none"
         >
-          At M-Tech Solutions (also written as MTech Solutions or M Tech Solutions), we do not just write code. We craft premium digital ecosystems that drive efficiency,
-          expand market footprint, and scale your operations. Our team is dedicated to
-          bridging beautiful design with hyper-performance systems.
+          We build software for businesses that value speed, design, and reliable technology. We turn complex business ideas into clean, easy-to-use digital applications.
         </h2>
-
-        {/* Small details footer */}
-        <div className="mt-12 md:mt-20 grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 pt-12 border-t border-border-main">
-          <div>
-            <h3 className="font-display font-bold text-lg mb-3 uppercase tracking-wider text-text-main">
-              The Cuberto Way
-            </h3>
-            <p className="text-accent-silver text-sm md:text-base leading-relaxed font-medium">
-              We believe a digital product is a living piece of art. Every transition, every
-              micro-interaction, and every pixel should feel intentional, fluid, and responsive to
-              the touch.
-            </p>
-          </div>
-          <div>
-            <h3 className="font-display font-bold text-lg mb-3 uppercase tracking-wider text-text-main">
-              Uncompromising Performance
-            </h3>
-            <p className="text-accent-silver text-sm md:text-base leading-relaxed font-medium">
-              Our codebases are optimized for lightning-fast loads, SEO crawlability, and modular
-              scaling. By decoupling static layouts and applying micro-animations, we achieve an
-              elite standard of responsiveness.
-            </p>
-          </div>
-        </div>
       </div>
     </section>
   );

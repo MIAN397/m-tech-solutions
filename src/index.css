@@ -26,34 +26,40 @@
   --card-bg: #181820;
   --card-hover: #22222d;
   --text-primary: #ffffff;
-  --text-secondary: #8e8e93;
-  --border-color: rgba(255, 255, 255, 0.05);
-  --nav-bg: rgba(8, 8, 10, 0.65);
+  --text-secondary: #94a3b8;
+  --border-color: rgba(255, 255, 255, 0.08);
+  --nav-bg: rgba(8, 8, 10, 0.75);
+  --nav-pill-bg: rgba(255, 255, 255, 0.06);
+  --nav-pill-hover: rgba(255, 255, 255, 0.12);
   
   /* Cursor Variables */
-  --cursor-ring-color: rgba(255, 255, 255, 0.25);
-  --cursor-magnetic-bg: rgba(255, 255, 255, 1);
+  --cursor-ring-color: rgba(255, 255, 255, 0.3);
+  --cursor-magnetic-bg: rgba(47, 87, 255, 0.15);
+  --cursor-magnetic-border: rgba(47, 87, 255, 0.4);
   --cursor-dot-bg: #2f57ff;
   --cursor-view-bg: #2f57ff;
-  --cursor-footer-bg: #ffffff;
+  --cursor-footer-bg: rgba(47, 87, 255, 0.15);
 }
 
 html.light {
-  --bg-primary: #f5f5f7;
-  --bg-secondary: #e8e8ed;
+  --bg-primary: #f8fafc;
+  --bg-secondary: #f1f5f9;
   --card-bg: #ffffff;
-  --card-hover: #f0f0f5;
-  --text-primary: #08080a;
-  --text-secondary: #515154;
-  --border-color: rgba(0, 0, 0, 0.08);
-  --nav-bg: rgba(245, 245, 247, 0.65);
+  --card-hover: #f8fafc;
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --border-color: rgba(15, 23, 42, 0.12);
+  --nav-bg: rgba(255, 255, 255, 0.85);
+  --nav-pill-bg: rgba(15, 23, 42, 0.05);
+  --nav-pill-hover: rgba(0, 102, 255, 0.1);
   
-  /* Cursor Variables */
-  --cursor-ring-color: rgba(0, 0, 0, 0.2);
-  --cursor-magnetic-bg: rgba(0, 0, 0, 1);
-  --cursor-dot-bg: #2f57ff;
-  --cursor-view-bg: #2f57ff;
-  --cursor-footer-bg: #000000;
+  /* Cursor Variables for Light Mode */
+  --cursor-ring-color: rgba(15, 23, 42, 0.25);
+  --cursor-magnetic-bg: rgba(0, 102, 255, 0.12);
+  --cursor-magnetic-border: rgba(0, 102, 255, 0.4);
+  --cursor-dot-bg: #0066ff;
+  --cursor-view-bg: #0066ff;
+  --cursor-footer-bg: rgba(0, 102, 255, 0.12);
 }
 
 :root {
@@ -71,7 +77,7 @@ html.light {
   }
 }
 
-/* Inertial Scrolling and smooth defaults */
+/* Smooth Scrolling & Background Defaults */
 html, body {
   background-color: var(--bg-primary);
   color: var(--text-primary);
@@ -94,7 +100,7 @@ html, body {
   transition: background 0.3s ease;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #2f57ff;
+  background: #0066ff;
 }
 
 /* Analog Noise Overlay for premium texture */
@@ -120,20 +126,25 @@ html, body {
 }
 
 .text-gradient-accent {
-  background: linear-gradient(135deg, #2f57ff 0%, #00d2ff 100%);
+  background: linear-gradient(135deg, #0066ff 0%, #00d2ff 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
-/* Custom Glassmorphism effects */
+/* Custom Glassmorphism effects with light theme optimization */
 .glass-card {
   background: var(--card-bg);
-  opacity: 0.95;
+  opacity: 0.96;
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border: 1px solid var(--border-color);
-  transition: background-color 0.4s ease, border-color 0.4s ease;
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.05);
+  transition: background-color 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+html.light .glass-card {
+  box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.05), 0 8px 10px -6px rgba(15, 23, 42, 0.03);
 }
 
 .glass-nav {
@@ -144,6 +155,10 @@ html, body {
   transition: background-color 0.4s ease, border-color 0.4s ease;
 }
 
+html.light .glass-nav {
+  box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.04);
+}
+
 /* Bento Grid custom hover glow */
 .bento-glow {
   position: absolute;
@@ -151,7 +166,7 @@ html, body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: radial-gradient(600px circle at var(--mouse-x, 0px) var(--mouse-y, 0px), var(--glow-color, rgba(47, 87, 255, 0.08)), transparent 40%);
+  background: radial-gradient(600px circle at var(--mouse-x, 0px) var(--mouse-y, 0px), var(--glow-color, rgba(0, 102, 255, 0.08)), transparent 40%);
   z-index: 2;
   pointer-events: none;
   opacity: 0;
@@ -220,14 +235,12 @@ body {
     overflow: visible !important;
   }
 
-  /* Force all parent containers to be unconstrained */
   #root, div, main, section, article {
     overflow: visible !important;
     height: auto !important;
     max-height: none !important;
   }
 
-  /* Hide noise background, cursor, navbar, header, footer, modals, form inputs */
   .noise-bg, 
   .no-print,
   #custom-cursor,
@@ -237,18 +250,15 @@ body {
     display: none !important;
   }
 
-  /* Hide everything inside body by default */
   body * {
     visibility: hidden !important;
   }
 
-  /* Make ONLY print-area and its children visible */
   .print-area,
   .print-area * {
     visibility: visible !important;
   }
 
-  /* Absolute position print-area to top-left of page */
   .print-area {
     position: absolute !important;
     left: 0 !important;
@@ -283,5 +293,3 @@ body {
     print-color-adjust: exact !important;
   }
 }
-
-

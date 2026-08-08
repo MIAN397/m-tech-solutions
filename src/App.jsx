@@ -5,6 +5,7 @@ import Hero from './components/Hero';
 import About from './components/About';
 import Services from './components/Services';
 import Portfolio from './components/Portfolio';
+import Reviews from './components/Reviews';
 import Footer from './components/Footer';
 import PartnerPortal from './components/PartnerPortal';
 
@@ -35,6 +36,7 @@ export default function App() {
             <About />
             <Services />
             <Portfolio />
+            <Reviews />
           </main>
           {/* Conversion footer */}
           <Footer />
