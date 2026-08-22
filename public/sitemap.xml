@@ -1,9 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://mtechsolutions.online/</loc>
-    <lastmod>2026-06-26</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2026-08-22</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://mtechsolutions.online/og-image.jpg</image:loc>
+      <image:title>M-Tech Solutions Custom Enterprise Systems &amp; Web Apps</image:title>
+      <image:caption>High performance custom digital products, POS, and ERP inventory platforms engineered by M-Tech Solutions</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://mtechsolutions.online/logo_transparent.png</image:loc>
+      <image:title>M-Tech Solutions Official Logo</image:title>
+    </image:image>
   </url>
 </urlset>

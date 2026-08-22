@@ -79,6 +79,45 @@ export default function About() {
         >
           We build software for businesses that value speed, design, and reliable technology. We turn complex business ideas into clean, easy-to-use digital applications.
         </h2>
+
+        {/* Keyword-Rich Core Competencies for SEO & Visitor Trust */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-12 sm:mt-16 pt-10 border-t border-border-main/60">
+          <div className="p-4 rounded-2xl bg-white/[0.02] border border-border-main">
+            <h3 className="font-display text-sm font-bold text-text-main uppercase tracking-wider mb-1 text-accent">
+              Custom ERP Systems
+            </h3>
+            <p className="text-accent-silver text-xs leading-relaxed">
+              Multi-branch inventory control, automated accounting, supplier ledger reconciliation, and live profit margins.
+            </p>
+          </div>
+
+          <div className="p-4 rounded-2xl bg-white/[0.02] border border-border-main">
+            <h3 className="font-display text-sm font-bold text-text-main uppercase tracking-wider mb-1 text-sky-400">
+              Offline Mobile POS
+            </h3>
+            <p className="text-accent-silver text-xs leading-relaxed">
+              Barcode scanning, instant invoice generation, thermal printer integration, and background sync during outages.
+            </p>
+          </div>
+
+          <div className="p-4 rounded-2xl bg-white/[0.02] border border-border-main">
+            <h3 className="font-display text-sm font-bold text-text-main uppercase tracking-wider mb-1 text-emerald-400">
+              Headless Web Apps
+            </h3>
+            <p className="text-accent-silver text-xs leading-relaxed">
+              Sub-second Next.js web storefronts with automated Shopify inventory linkage and custom API microservices.
+            </p>
+          </div>
+
+          <div className="p-4 rounded-2xl bg-white/[0.02] border border-border-main">
+            <h3 className="font-display text-sm font-bold text-text-main uppercase tracking-wider mb-1 text-purple-400">
+              Full-Stack Cloud
+            </h3>
+            <p className="text-accent-silver text-xs leading-relaxed">
+              Enterprise React, Node.js, and MongoDB architectures engineered for high-throughput scaling and zero downtime.
+            </p>
+          </div>
+        </div>
       </div>
     </section>
   );

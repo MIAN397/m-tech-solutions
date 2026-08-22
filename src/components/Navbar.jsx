@@ -16,6 +16,7 @@ export default function Navbar({ onPortalClick, isPortalOpen }) {
     { name: 'Services', href: '#services' },
     { name: 'Portfolio', href: '#portfolio' },
     { name: 'Reviews', href: '#reviews' },
+    { name: 'FAQ', href: '#faq' },
     { name: 'Contact', href: '#contact' }
   ];
 

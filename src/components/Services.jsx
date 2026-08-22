@@ -1,5 +1,6 @@
 import { useRef } from 'react';
-import { Layers, Database, ShieldAlert, Cpu, Laptop, LineChart } from 'lucide-react';
+import { Layers, Database, ShieldAlert, Cpu, Laptop, LineChart, ArrowUpRight } from 'lucide-react';
+import { trackQuoteClick } from '../utils/analytics';
 
 export default function Services() {
   const cardsRef = useRef([]);
@@ -109,14 +110,16 @@ export default function Services() {
           {services.map((service, index) => {
             const Icon = service.icon;
             return (
-              <div
+              <a
                 key={index}
+                href="#contact"
+                onClick={() => trackQuoteClick(`Service Card - ${service.title}`)}
                 ref={(el) => (cardsRef.current[index] = el)}
                 onMouseMove={(e) => handleMouseMove(e, index)}
                 data-cursor="view"
                 data-cursor-text={service.cursorText}
                 style={{ '--glow-color': service.glowColor }}
-                className={`bento-card group relative overflow-hidden rounded-[24px] sm:rounded-[32px] bg-dark-secondary border border-border-main p-6 sm:p-7 md:p-8 flex flex-col justify-between ${service.color} transition-all duration-500`}
+                className={`bento-card group relative overflow-hidden rounded-[24px] sm:rounded-[32px] bg-dark-secondary border border-border-main p-6 sm:p-7 md:p-8 flex flex-col justify-between ${service.color} transition-all duration-500 hover:-translate-y-1 block cursor-pointer`}
               >
                 {/* Custom Card Spotlight Glow */}
                 <div className="bento-glow" />
@@ -125,6 +128,9 @@ export default function Services() {
                   <div className="flex justify-between items-start mb-6 sm:mb-8">
                     <div className={`p-3 sm:p-4 rounded-2xl border border-border-main transition-colors duration-500 ${service.iconColor}`}>
                       <Icon className="w-5 h-5 sm:w-6 sm:h-6" />
+                    </div>
+                    <div className="p-2 rounded-full bg-white/5 border border-white/10 group-hover:bg-accent group-hover:text-white transition-all duration-300">
+                      <ArrowUpRight className="w-4 h-4 text-accent-silver group-hover:text-white group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                     </div>
                   </div>
 
@@ -143,9 +149,12 @@ export default function Services() {
 
                 <div className="mt-6 sm:mt-8 pt-4 border-t border-border-main/50 flex items-center justify-between">
                   <span className="text-[10px] font-bold text-accent-silver uppercase tracking-wider">Engineering Spec</span>
-                  <span className="text-xs font-bold text-accent">Production Ready</span>
+                  <span className="text-xs font-bold text-accent flex items-center gap-1 group-hover:underline">
+                    <span>Request Architecture Quote</span>
+                    <ArrowUpRight className="w-3.5 h-3.5" />
+                  </span>
                 </div>
-              </div>
+              </a>
             );
           })}
         </div>

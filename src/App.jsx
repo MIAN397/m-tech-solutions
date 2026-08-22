@@ -6,8 +6,10 @@ import About from './components/About';
 import Services from './components/Services';
 import Portfolio from './components/Portfolio';
 import Reviews from './components/Reviews';
+import FAQ from './components/FAQ';
 import Footer from './components/Footer';
 import PartnerPortal from './components/PartnerPortal';
+import FloatingCTA from './components/FloatingCTA';
 
 export default function App() {
   const [view, setView] = useState('home'); // 'home' or 'portal'
@@ -37,6 +39,7 @@ export default function App() {
             <Services />
             <Portfolio />
             <Reviews />
+            <FAQ />
           </main>
           {/* Conversion footer */}
           <Footer />
@@ -44,6 +47,9 @@ export default function App() {
       ) : (
         <PartnerPortal onClose={() => { setView('home'); window.scrollTo({ top: 0, behavior: 'instant' }); }} />
       )}
+
+      {/* Sticky Floating CTA Conversion Bar */}
+      <FloatingCTA />
     </div>
   );
 }

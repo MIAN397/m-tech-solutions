@@ -1,10 +1,13 @@
 import { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
-import { ArrowDown } from 'lucide-react';
+import { ArrowDown, MessageCircle, ArrowUpRight, Star } from 'lucide-react';
+import { trackWhatsAppClick, trackQuoteClick } from '../utils/analytics';
 
 export default function Hero() {
   const canvasRef = useRef(null);
   const scrollBtnRef = useRef(null);
+  const primaryBtnRef = useRef(null);
+  const whatsappBtnRef = useRef(null);
 
   useEffect(() => {
     // 1. Dynamic Canvas Animation (Flow Wave Field)
@@ -106,35 +109,6 @@ export default function Hero() {
       '-=0.6'
     );
 
-    // 3. Scroll Button Magnetic Effect
-    const btn = scrollBtnRef.current;
-    if (btn) {
-      const handleBtnMove = (e) => {
-        const rect = btn.getBoundingClientRect();
-        const centerX = rect.left + rect.width / 2;
-        const centerY = rect.top + rect.height / 2;
-        const x = (e.clientX - centerX) * 0.4;
-        const y = (e.clientY - centerY) * 0.4;
-
-        gsap.to(btn, { x, y, duration: 0.3, ease: 'power2.out' });
-      };
-
-      const handleBtnLeave = () => {
-        gsap.to(btn, { x: 0, y: 0, duration: 0.5, ease: 'elastic.out(1, 0.3)' });
-      };
-
-      btn.addEventListener('mousemove', handleBtnMove);
-      btn.addEventListener('mouseleave', handleBtnLeave);
-
-      return () => {
-        window.removeEventListener('mousemove', handleMouseMove);
-        window.removeEventListener('resize', handleResize);
-        cancelAnimationFrame(animationFrameId);
-        btn.removeEventListener('mousemove', handleBtnMove);
-        btn.removeEventListener('mouseleave', handleBtnLeave);
-      };
-    }
-
     return () => {
       window.removeEventListener('mousemove', handleMouseMove);
       window.removeEventListener('resize', handleResize);
@@ -145,7 +119,7 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative w-full min-h-screen flex flex-col justify-center items-center px-4 sm:px-6 md:px-12 overflow-hidden bg-dark pt-20 md:pt-0"
+      className="relative w-full min-h-screen flex flex-col justify-center items-center px-4 sm:px-6 md:px-12 overflow-hidden bg-dark pt-24 md:pt-16 pb-12"
     >
       {/* Background Interactive Waves */}
       <canvas ref={canvasRef} className="absolute inset-0 w-full h-full pointer-events-none" />
@@ -153,7 +127,19 @@ export default function Hero() {
       {/* Grid Pattern Details */}
       <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.015)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.015)_1px,transparent_1px)] bg-[size:40px_40px] pointer-events-none" />
 
-      <div className="relative z-10 w-full max-w-6xl flex flex-col items-center text-center mt-6 sm:mt-12 md:mt-20">
+      <div className="relative z-10 w-full max-w-6xl flex flex-col items-center text-center mt-4 sm:mt-8 md:mt-12">
+        {/* Social Proof Rating Badge */}
+        <div className="hero-subhead inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/5 border border-border-main backdrop-blur-md mb-6 shadow-sm opacity-0">
+          <div className="flex items-center gap-0.5">
+            {[...Array(5)].map((_, i) => (
+              <Star key={i} className="w-3.5 h-3.5 fill-amber-400 text-amber-400" />
+            ))}
+          </div>
+          <span className="text-xs font-bold text-text-main">4.98 Rating</span>
+          <span className="text-accent-silver text-xs">•</span>
+          <span className="text-xs font-semibold text-accent">50+ Enterprise Systems Delivered</span>
+        </div>
+
         {/* Massive Typography Headers */}
         <h1 className="font-display font-extrabold tracking-tight text-text-main flex flex-col gap-1 md:gap-3 leading-tight sm:leading-none select-none text-[11vw] sm:text-[9vw] lg:text-[7.5vw] uppercase">
           <span className="overflow-hidden block py-0.5 sm:py-1">
@@ -167,21 +153,46 @@ export default function Hero() {
         {/* Supporting Subtitle */}
         <p className="hero-subhead max-w-xl md:max-w-2xl text-accent-silver text-sm sm:text-base md:text-xl font-medium tracking-wide mt-4 sm:mt-6 md:mt-8 leading-relaxed opacity-0">
           M-Tech Solutions scales businesses by building high-performance, custom digital products.
-          From enterprise architectures to premium web & mobile experiences.
+          From enterprise POS &amp; Inventory ERP architectures to premium web &amp; mobile platforms.
         </p>
 
-        {/* Explore Button */}
-        <div className="hero-scroll-cta mt-8 sm:mt-12 md:mt-16 opacity-0">
+        {/* High Conversion Dual Action Buttons */}
+        <div className="hero-scroll-cta mt-8 sm:mt-10 md:mt-12 flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto opacity-0">
+          <a
+            href="#contact"
+            ref={primaryBtnRef}
+            onClick={() => trackQuoteClick('Hero Primary Button')}
+            data-cursor="magnetic"
+            className="w-full sm:w-auto bg-accent hover:bg-accent-blue text-white font-bold text-sm md:text-base px-8 py-4 rounded-full flex items-center justify-center gap-2.5 shadow-lg shadow-accent/25 hover:shadow-accent/40 transition-all duration-300 transform active:scale-95"
+          >
+            <span>Start Your Project</span>
+            <ArrowUpRight className="w-5 h-5 shrink-0" />
+          </a>
+
+          <a
+            href="https://wa.me/923363800438?text=Hi%20M-Tech%20Solutions,%20I'd%20like%20to%20discuss%20a%20custom%20software%20project"
+            target="_blank"
+            rel="noopener noreferrer"
+            ref={whatsappBtnRef}
+            onClick={() => trackWhatsAppClick('Hero Secondary Button')}
+            data-cursor="magnetic"
+            className="w-full sm:w-auto bg-white/5 hover:bg-white/10 text-text-main border border-border-main hover:border-accent font-bold text-sm md:text-base px-7 py-4 rounded-full flex items-center justify-center gap-2.5 transition-all duration-300 transform active:scale-95"
+          >
+            <MessageCircle className="w-5 h-5 text-emerald-400 shrink-0" />
+            <span>Chat on WhatsApp</span>
+          </a>
+        </div>
+
+        {/* Subtle Scroll Indicator */}
+        <div className="hero-scroll-cta mt-10 md:mt-14 opacity-0 flex flex-col items-center">
           <a
             href="#about"
             ref={scrollBtnRef}
             data-cursor="magnetic"
-            className="magnetic-btn w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 border border-border-main rounded-full flex flex-col items-center justify-center gap-1.5 sm:gap-2 hover:border-accent hover:bg-accent/5 transition-colors duration-300 active:scale-95"
+            className="group flex flex-col items-center gap-1.5 text-accent-silver hover:text-accent transition-colors"
           >
-            <span className="text-[10px] md:text-xs font-bold uppercase tracking-widest text-text-main">
-              Explore
-            </span>
-            <ArrowDown className="w-3.5 h-3.5 md:w-4 md:h-4 text-accent animate-bounce" />
+            <span className="text-[10px] font-bold uppercase tracking-widest">Explore Capabilities</span>
+            <ArrowDown className="w-4 h-4 text-accent animate-bounce" />
           </a>
         </div>
       </div>

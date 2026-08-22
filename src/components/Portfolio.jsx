@@ -1,5 +1,6 @@
 import { useRef } from 'react';
-import { Smartphone, GraduationCap, ShoppingBag, Terminal, ExternalLink } from 'lucide-react';
+import { Smartphone, GraduationCap, ShoppingBag, Terminal, ArrowUpRight } from 'lucide-react';
+import { trackQuoteClick } from '../utils/analytics';
 import erpDashboardMockup from '../assets/erp_dashboard_mockup.png';
 import mobilePosMockup from '../assets/mobile_pos_mockup.png';
 import ecommerceStoreMockup from '../assets/ecommerce_store_mockup.png';
@@ -102,14 +103,16 @@ export default function Portfolio() {
           {projects.map((project, index) => {
             const Icon = project.icon;
             return (
-              <div
+              <a
                 key={index}
+                href="#contact"
+                onClick={() => trackQuoteClick(`Portfolio Card - ${project.title}`)}
                 ref={(el) => (cardsRef.current[index] = el)}
                 onMouseMove={(e) => handleMouseMove(e, index)}
                 data-cursor="view"
                 data-cursor-text="case-study"
                 style={{ '--glow-color': project.glowColor }}
-                className={`bento-card group relative overflow-hidden rounded-[24px] sm:rounded-[32px] bg-dark border border-border-main p-6 sm:p-8 md:p-10 flex flex-col justify-between min-h-[380px] sm:min-h-[420px] ${project.color} transition-all duration-500`}
+                className={`bento-card group relative overflow-hidden rounded-[24px] sm:rounded-[32px] bg-dark border border-border-main p-6 sm:p-8 md:p-10 flex flex-col justify-between min-h-[380px] sm:min-h-[420px] ${project.color} transition-all duration-500 hover:-translate-y-1 block cursor-pointer`}
               >
                 {/* Custom Card Spotlight Glow */}
                 <div className="bento-glow" />
@@ -118,9 +121,12 @@ export default function Portfolio() {
                 <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
                   <img
                     src={project.image}
-                    alt={project.title}
-                    className="w-full h-full object-cover opacity-20 sm:opacity-25 group-hover:opacity-50 group-hover:scale-105 transition-all duration-700 ease-out"
+                    alt={`M-Tech Solutions Case Study - ${project.title} (${project.subtitle})`}
+                    width="600"
+                    height="400"
+                    decoding="async"
                     loading="lazy"
+                    className="w-full h-full object-cover opacity-20 sm:opacity-25 group-hover:opacity-50 group-hover:scale-105 transition-all duration-700 ease-out"
                   />
                   <div className="absolute inset-0 bento-image-overlay" />
                 </div>
@@ -137,9 +143,12 @@ export default function Portfolio() {
 
                 {/* Card Main Info */}
                 <div className="relative z-10 mt-6 sm:mt-10 flex flex-col justify-end flex-grow">
-                  <h3 className="font-display font-bold text-xl sm:text-2xl text-text-main group-hover:text-accent transition-colors duration-500 mb-2 sm:mb-3 flex items-center gap-2">
+                  <h3 className="font-display font-bold text-xl sm:text-2xl text-text-main group-hover:text-accent transition-colors duration-500 mb-2 sm:mb-3 flex items-center justify-between">
                     <span>{project.title}</span>
-                    <ExternalLink className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-accent shrink-0" />
+                    <span className="inline-flex items-center gap-1 text-xs font-bold text-accent group-hover:translate-x-1 transition-transform">
+                      <span>Discuss Similar System</span>
+                      <ArrowUpRight className="w-4 h-4 shrink-0" />
+                    </span>
                   </h3>
                   <p className="text-accent-silver text-xs sm:text-sm font-medium leading-relaxed mb-4 sm:mb-6">
                     {project.desc}
@@ -157,7 +166,7 @@ export default function Portfolio() {
                     ))}
                   </div>
                 </div>
-              </div>
+              </a>
             );
           })}
         </div>
