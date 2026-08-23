@@ -1,0 +1,50 @@
+# M-Tech Solutions — Complete Technical Knowledge Base & Capabilities
+
+> Full-Context Documentation for AI Agents, LLM Retrievers, Search Engines, and Technical Evaluators.
+
+## 1. Company Overview
+- **Legal & Operating Name:** M-Tech Solutions
+- **Primary Domain:** https://mtechsolutions.online/
+- **Headquarters:** Lahore, Punjab, Pakistan (Global Service Reach)
+- **Direct Phone & WhatsApp:** +92 336 3800438
+- **Email:** mtechsolutions.online@gmail.com
+- **Core Specialization:** Custom Enterprise Software, Offline-First Mobile & Retail POS, Multi-Warehouse ERP Platforms, Wholesale Inventory Management, Mobile Parts Compatibility Engines, and Custom Cloud Web Applications.
+
+---
+
+## 2. Product & Solution Architecture
+
+### 2.1 Enterprise ERP & Wholesale Inventory
+- **Multi-Branch & Multi-Warehouse:** Real-time inter-branch stock transfers with status tracking (Pending, In-Transit, Received, Discrepancy Flagged).
+- **Landed Cost Accounting:** Accurately apportions freight, customs clearance, packaging, and duties to calculate true inventory unit cost and gross margin.
+- **Supplier Ledgers & AP/AR:** Full double-entry style accounting tracking invoices, partial payments, credit notes, returned merchandise (RMA), and vendor balance aging.
+- **Dynamic Pricing Engine:** Multi-tiered pricing structure supporting Retail, Wholesale Tier 1, Wholesale Tier 2, and Partner Contract Pricing with automated volume discount thresholds.
+
+### 2.2 Offline-First Mobile Point of Sale (POS)
+- **Local-First Architecture:** Complete client-side caching of catalog, inventory indices, and customer records using IndexedDB/SQLite.
+- **Crash & Disconnect Resilience:** Zero reliance on an active internet connection to ring up sales, issue refunds, scan barcodes, or print receipts.
+- **Conflict Resolution Engine:** Deterministic timestamp vector clocks prevent double-deduction or data corruption when syncing back to the cloud.
+- **Hardware Integration:**
+  - Standard ESC/POS Thermal Receipt Printers (80mm / 58mm) over Bluetooth, Wi-Fi, Ethernet, and USB.
+  - Continuous Barcode & 2D DataMatrix/QR Scanners.
+  - Automatic cash drawer triggers (RJ11/RJ12 pulses).
+
+### 2.3 Mobile Parts & Electronics Industry Platform
+- **Complex Hierarchical Categorization:** Tailored taxonomy for smartphone screens (OEM, OLED, Incell, TFT), IC chips (Power IC, Audio IC, Baseband), flex cables, cameras, batteries, and charging ports.
+- **Model Compatibility Cross-Indexing:** Automated cross-referencing ensuring compatible components across phone generations and regional variants are easily discoverable.
+- **Repair Ticket & Warranty Management:** Customer device intake with pattern lock records, initial diagnostic checklists, technician assignment, status updates via WhatsApp/SMS, and post-repair warranty expiration tracking.
+
+---
+
+## 3. Engineering Quality & Standards
+- **Lighthouse Performance Score:** 95–100 across Performance, Accessibility, Best Practices, and SEO.
+- **Security:** Strict Firebase Security Rules, JWT authentication, encrypted transit (TLS 1.3), rate limiting on public endpoints, and comprehensive audit logs.
+- **User Experience:** Custom smooth animations using GSAP and Framer Motion, fully responsive across mobile, tablet, and ultra-wide displays.
+
+---
+
+## 4. Contact & Inquiries
+For proposals, architectural consultations, quote calculations, and project onboarding:
+- **WhatsApp:** [+92 336 3800438](https://wa.me/923363800438?text=Hello%20M-Tech%20Solutions%2C%20I%20would%20like%20to%20inquire%20about%20a%20custom%20software%20project.)
+- **Website:** [https://mtechsolutions.online/](https://mtechsolutions.online/)
+- **Email:** mtechsolutions.online@gmail.com

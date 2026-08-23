@@ -1,25 +1,58 @@
+# Robots.txt for M-Tech Solutions (https://mtechsolutions.online/)
+
+# Global Rule
 User-agent: *
 Allow: /
 
+# Google Search & Google Gemini / AI Overviews
 User-agent: Googlebot
 Allow: /
-
 User-agent: Googlebot-Image
 Allow: /
+User-agent: Google-Extended
+Allow: /
 
+# Microsoft Bing & Copilot
 User-agent: Bingbot
 Allow: /
 
-User-agent: DuckDuckBot
+# OpenAI / ChatGPT / SearchGPT
+User-agent: GPTBot
+Allow: /
+User-agent: OAI-SearchBot
+Allow: /
+User-agent: ChatGPT-User
 Allow: /
 
+# Anthropic Claude
+User-agent: ClaudeBot
+Allow: /
+User-agent: anthropic-ai
+Allow: /
+
+# Perplexity AI
+User-agent: PerplexityBot
+Allow: /
+
+# Apple Search & Apple Intelligence
 User-agent: Applebot
 Allow: /
+User-agent: Applebot-Extended
+Allow: /
 
+# Meta AI
+User-agent: meta-externalagent
+Allow: /
+
+# Other Major Search & AI Crawlers
+User-agent: DuckDuckBot
+Allow: /
 User-agent: Twitterbot
 Allow: /
-
 User-agent: facebookexternalhit
 Allow: /
+User-agent: cohere-ai
+Allow: /
 
+# Sitemaps & Machine-Readable Context
 Sitemap: https://mtechsolutions.online/sitemap.xml

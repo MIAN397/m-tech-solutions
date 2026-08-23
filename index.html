@@ -12,6 +12,10 @@
     <link rel="manifest" href="/site.webmanifest" />
     <link rel="canonical" href="https://mtechsolutions.online/" />
 
+    <!-- LLM & AI Agent Discovery -->
+    <link rel="alternate" type="text/markdown" href="/llms.txt" title="LLM Context" />
+    <link rel="llms-txt" href="/llms.txt" />
+
     <script>
       if (window.location.hostname !== 'mtechsolutions.online' && window.location.hostname !== 'localhost' && !window.location.hostname.includes('127.0.0.1')) {
         window.location.replace('https://mtechsolutions.online' + window.location.pathname + window.location.search);
@@ -67,7 +71,7 @@
       gtag('config', 'G-MEASUREMENT_ID', { send_page_view: true });
     </script>
 
-    <!-- JSON-LD Structured Data Schema Graph for Search Engines & AI Overviews -->
+    <!-- Comprehensive JSON-LD Structured Data Schema Graph for Search Engines & AI Overviews -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -77,10 +81,11 @@
             "@id": "https://mtechsolutions.online/#website",
             "url": "https://mtechsolutions.online/",
             "name": "M-Tech Solutions",
-            "description": "Custom Enterprise Systems & Premium Web Apps Development",
+            "description": "Custom Enterprise Systems, Offline-First Mobile POS & Web Apps Development",
             "publisher": {
               "@id": "https://mtechsolutions.online/#organization"
-            }
+            },
+            "inLanguage": "en-US"
           },
           {
             "@type": "Organization",
@@ -88,6 +93,7 @@
             "name": "M-Tech Solutions",
             "alternateName": ["mtechsolutions", "MTech Solutions", "MTech", "mtechsolutions.online"],
             "url": "https://mtechsolutions.online/",
+            "slogan": "Engineering High-Performance Custom Enterprise Systems",
             "sameAs": [
               "https://www.instagram.com/mtechsolutions.online/"
             ],
@@ -100,11 +106,25 @@
             "contactPoint": {
               "@type": "ContactPoint",
               "telephone": "+923363800438",
-              "contactType": "sales",
+              "contactType": "customer service",
               "email": "mtechsolutions.online@gmail.com",
               "areaServed": "Global",
               "availableLanguage": ["English", "Urdu"]
-            }
+            },
+            "knowsAbout": [
+              "Enterprise Resource Planning (ERP)",
+              "Point of Sale (POS) Systems",
+              "Mobile Parts Management Software",
+              "Inventory Management",
+              "Offline-First Web & Mobile Architecture",
+              "Hardware Integration (ESC/POS Thermal Printers, Barcode Scanners)",
+              "React",
+              "Next.js",
+              "Node.js",
+              "Firebase",
+              "Tailwind CSS",
+              "PostgreSQL"
+            ]
           },
           {
             "@type": "ProfessionalService",
@@ -114,11 +134,22 @@
             "image": "https://mtechsolutions.online/og-image.jpg",
             "description": "M-Tech Solutions scales businesses by building high-performance, custom digital products. Specializing in retail POS, wholesale Inventory ERP, mobile parts systems, and custom web applications.",
             "telephone": "+923363800438",
-            "priceRange": "$$$",
+            "email": "mtechsolutions.online@gmail.com",
+            "priceRange": "$$",
             "address": {
               "@type": "PostalAddress",
+              "addressLocality": "Lahore",
+              "addressRegion": "Punjab",
               "addressCountry": "PK"
             },
+            "openingHoursSpecification": [
+              {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+                "opens": "09:00",
+                "closes": "20:00"
+              }
+            ],
             "aggregateRating": {
               "@type": "AggregateRating",
               "ratingValue": "4.98",
@@ -134,21 +165,32 @@
                   "@type": "Offer",
                   "itemOffered": {
                     "@type": "Service",
-                    "name": "Custom ERP & Inventory Management Systems"
+                    "name": "Custom ERP & Inventory Management Systems",
+                    "description": "Multi-branch stock transfers, supplier ledger, landed cost calculations, and automated re-ordering thresholds."
                   }
                 },
                 {
                   "@type": "Offer",
                   "itemOffered": {
                     "@type": "Service",
-                    "name": "Mobile POS Systems (iOS & Android)"
+                    "name": "Offline-First Mobile POS Systems",
+                    "description": "Cross-platform point of sale with local SQLite/IndexedDB caching, hardware bridging with ESC/POS printers, and auto-sync."
                   }
                 },
                 {
                   "@type": "Offer",
                   "itemOffered": {
                     "@type": "Service",
-                    "name": "Headless E-Commerce Web Platforms"
+                    "name": "Mobile Parts Compatibility & Inventory Platforms",
+                    "description": "Specialized wholesale cataloging for smartphone LCDs, IC chips, flex cables, with IMEI/serial tracking and RMA warranty management."
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Headless E-Commerce & Full-Stack Web Apps",
+                    "description": "High-speed custom storefronts, payment gateway integration, WhatsApp notification automation, and telemetry dashboards."
                   }
                 }
               ]
@@ -250,6 +292,24 @@
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Syne:wght@500;700;800&display=swap" rel="stylesheet" />
   </head>
   <body class="overflow-x-hidden selection:bg-accent selection:text-white antialiased">
+    <!-- Pre-rendered Semantic Fallback for Instant Non-JS Crawlers & AI Agent Scrapers -->
+    <noscript>
+      <div style="padding: 2rem; max-width: 800px; margin: auto; font-family: sans-serif; color: #333; background: #fff;">
+        <h1>M-Tech Solutions — Custom Enterprise ERP, POS & Web Applications</h1>
+        <p>M-Tech Solutions builds high-performance custom digital products, offline-first mobile Point of Sale (POS), wholesale inventory ERP platforms, and custom web applications.</p>
+        <h2>Our Services</h2>
+        <ul>
+          <li><strong>Custom ERP & Inventory Management:</strong> Multi-branch inventory tracking, supplier ledgers, landed cost calculation, and re-ordering alerts.</li>
+          <li><strong>Offline-First Mobile POS:</strong> Seamless billing, thermal printer hardware bridging (ESC/POS), and offline SQLite/IndexedDB sync.</li>
+          <li><strong>Mobile Parts ERP Platform:</strong> Specialized cataloging for smartphone LCDs, IC chips, flex cables, and repair tracking.</li>
+          <li><strong>Headless E-Commerce & Full-Stack Web Apps:</strong> High-speed React, Next.js, and Firebase applications.</li>
+        </ul>
+        <h2>Contact & Free Project Quote</h2>
+        <p>Phone & WhatsApp: <strong>+92 336 3800438</strong> | Email: <strong>mtechsolutions.online@gmail.com</strong></p>
+        <p>Full machine-readable specification: <a href="/llms.txt">llms.txt</a> | <a href="/sitemap.xml">sitemap.xml</a></p>
+      </div>
+    </noscript>
+
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>

@@ -1,0 +1,67 @@
+# M-Tech Solutions
+
+> Enterprise Software Engineering, Custom ERP Systems, Offline-First Mobile POS, and High-Performance Web Applications.
+
+M-Tech Solutions is a premier custom software development and technology consulting company based in Lahore, Pakistan, serving clients globally. We engineer bespoke, mission-critical digital products tailored for retail businesses, wholesale distribution networks, mobile parts suppliers, and enterprise operations.
+
+- Website: https://mtechsolutions.online/
+- Contact Phone / WhatsApp: +92 336 3800438
+- Email: mtechsolutions.online@gmail.com
+- Availability: Monday – Saturday (09:00 AM – 08:00 PM PKT)
+- Full Context & Technical Documentation: https://mtechsolutions.online/llms-full.txt
+
+---
+
+## Core Services
+
+### 1. Custom ERP & Wholesale Inventory Management Systems
+- Real-time multi-branch inventory tracking with batch & serial number management.
+- Supplier purchase order automation, landed cost calculation, and goods received note (GRN) workflows.
+- Customer ledger, debit/credit accounts receivable, aging reports, and cash flow reconciliation.
+- Automated low-stock alerts, stock transfer requests, and multi-warehouse logistics.
+- Role-based access control (RBAC) with granular security permissions and audit trails.
+
+### 2. Offline-First Mobile POS (Point of Sale)
+- Seamless billing and invoicing for iOS, Android, and Desktop (Windows/macOS/Linux).
+- True offline capability: full billing, barcode scanning, and receipt printing even during internet outages using local IndexedDB/SQLite storage.
+- Auto-reconciliation background sync as soon as network connectivity is restored.
+- Hardware integrations: ESC/POS thermal receipt printers (Bluetooth, USB, Network), barcode/2D QR scanners, electronic cash drawers, and customer-facing displays.
+
+### 3. Mobile Parts & Electronics Industry Solutions
+- Specialized classification for mobile screens, IC chips, flex cables, housing, and battery models with brand/generation compatibility matrix.
+- IMEI / Serial tracking for repair jobs, warranty tracking, and technician performance metrics.
+- Wholesale tiered pricing models (Retail, B2B wholesale, VIP partner pricing).
+
+### 4. High-Performance Headless E-Commerce & Web Platforms
+- Next.js / React / Vite frontends with ultra-fast Core Web Vitals (< 1s LCP, 100/100 performance scores).
+- Firebase, Node.js, PostgreSQL, and GraphQL serverless backends.
+- Custom payment gateway integration, SMS notification hooks, and WhatsApp order dispatch bots.
+
+---
+
+## Technical Stack & Architecture
+
+- **Frontend:** React 19, Next.js, Tailwind CSS, Framer Motion, GSAP.
+- **Backend & Cloud:** Firebase (Firestore, Cloud Functions, Auth, Storage), Node.js, Express, PostgreSQL, REST & GraphQL APIs.
+- **Offline Storage & Workers:** IndexedDB, SQLite, Service Workers, Background Sync API.
+- **Hardware Bridging:** WebUSB, Web Bluetooth, ESC/POS Raw Socket TCP, Serial COM ports.
+- **Security:** Enterprise RBAC, end-to-end encrypted payloads, audit log streams, automated daily cloud backups.
+
+---
+
+## Frequently Asked Questions (FAQ)
+
+### What services does M-Tech Solutions provide?
+M-Tech Solutions provides end-to-end custom software engineering, specializing in Custom ERP & Inventory Management, Offline-First Mobile POS systems, Mobile Parts Wholesale Platforms, and High-Performance Web Applications.
+
+### How do offline POS systems handle internet outages?
+Our POS applications store transactions locally in secure offline storage (IndexedDB/SQLite). Invoicing, printing, and scanning continue with zero interruption. When connectivity returns, transactions automatically reconcile with the cloud database.
+
+### Can M-Tech Solutions integrate with existing hardware?
+Yes. We integrate with ESC/POS thermal receipt printers, USB/Bluetooth barcode scanners, cash drawers, and barcode label printers without requiring you to replace your existing physical hardware.
+
+### What is the typical project delivery timeline?
+Custom systems are typically delivered in 2 to 6 weeks depending on project scope, with agile milestone releases and live staging previews.
+
+### How do I get a free quote or consultation?
+Contact M-Tech Solutions via WhatsApp or Phone at **+92 336 3800438**, email at **mtechsolutions.online@gmail.com**, or request a quote on https://mtechsolutions.online/.
