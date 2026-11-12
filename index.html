@@ -2,76 +2,89 @@
 <html lang="en" class="dark scroll-smooth">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#090d16" />
+
     <!-- Favicon & Touch Icons for Google Search & Browsers -->
     <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png" />
+    <link rel="icon" type="image/png" sizes="512x512" href="/favicon-512x512.png" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="shortcut icon" href="/favicon.ico" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <link rel="manifest" href="/site.webmanifest" />
-    <link rel="canonical" href="https://mtechsolutions.online/" />
 
-    <!-- LLM & AI Agent Discovery -->
-    <link rel="alternate" type="text/markdown" href="/llms.txt" title="LLM Context" />
+    <!-- Canonical & International Hreflang Tags -->
+    <link rel="canonical" href="https://mtechsolutions.online/" />
+    <link rel="alternate" hreflang="en" href="https://mtechsolutions.online/" />
+    <link rel="alternate" hreflang="en-PK" href="https://mtechsolutions.online/" />
+    <link rel="alternate" hreflang="x-default" href="https://mtechsolutions.online/" />
+
+    <!-- LLM, AI Search & Agentic Discovery Links -->
+    <link rel="alternate" type="text/markdown" href="/index.md" title="M-Tech Solutions Markdown Specification" />
+    <link rel="alternate" type="text/plain" href="/llms.txt" title="LLM Context Summary" />
+    <link rel="alternate" type="text/plain" href="/llms-full.txt" title="LLM Complete Technical Documentation" />
     <link rel="llms-txt" href="/llms.txt" />
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" />
+    <link rel="author" href="/humans.txt" />
 
     <script>
-      if (window.location.hostname !== 'mtechsolutions.online' && window.location.hostname !== 'localhost' && !window.location.hostname.includes('127.0.0.1')) {
-        window.location.replace('https://mtechsolutions.online' + window.location.pathname + window.location.search);
+      if (
+        typeof window !== 'undefined' &&
+        window.location.hostname !== 'mtechsolutions.online' &&
+        window.location.hostname !== 'localhost' &&
+        !window.location.hostname.includes('127.0.0.1')
+      ) {
+        window.location.replace('https://mtechsolutions.online' + window.location.pathname + window.location.search + window.location.hash);
       }
+      window.dataLayer = window.dataLayer || [];
+      window.gtag = window.gtag || function(){ window.dataLayer.push(arguments); };
     </script>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#090d16" />
+
+    <!-- Search Engine & AI Crawler Directives -->
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
     <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
     <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
 
     <!-- Geo & Local Business SEO Meta Tags -->
-    <meta name="geo.region" content="PK" />
-    <meta name="geo.placename" content="Lahore, Pakistan" />
+    <meta name="geo.region" content="PK-PB" />
+    <meta name="geo.placename" content="Lahore, Punjab, Pakistan" />
     <meta name="geo.position" content="31.5204;74.3587" />
     <meta name="ICBM" content="31.5204, 74.3587" />
-    
+
     <!-- Primary SEO Meta Tags -->
-    <title>M-Tech Solutions | Custom Enterprise ERP, POS &amp; Web Apps | Free Quote</title>
-    <meta name="description" content="M-Tech Solutions scales businesses by building high-performance, custom digital products, mobile POS, inventory ERPs, and premium web apps. Get a free project quote today." />
-    <meta name="keywords" content="M-Tech Solutions, mtechsolutions, MTech Solutions, custom ERP, inventory systems, mobile parts ERP, POS software, web development agency, Pakistan software company, enterprise software engineering" />
-    <meta name="author" content="M-Tech Solutions" />
+    <title>M-Tech Solutions | Custom Enterprise ERP, Offline Mobile POS &amp; Web App Development</title>
+    <meta name="description" content="M-Tech Solutions engineers custom Enterprise ERP, Offline-First Mobile POS, Mobile Parts Inventory SaaS, LMS Portals &amp; Next.js Web Apps. 4.98★ across 50+ systems." />
+    <meta name="keywords" content="M-Tech Solutions, mtechsolutions, MTech Solutions, mtechsolutions.online, Tuaha Afzal, custom ERP software, offline mobile POS system, wholesale inventory management software, mobile parts ERP SaaS, POS software Pakistan, custom web application development, Next.js headless ecommerce, LMS CBT exam portal development, Lahore software company" />
+    <meta name="author" content="M-Tech Solutions (Tuaha Afzal)" />
+    <meta name="application-name" content="M-Tech Solutions" />
+    <meta name="apple-mobile-web-app-title" content="M-Tech Solutions" />
     <meta name="rating" content="General" />
-    <meta name="revisit-after" content="7 days" />
-    
-    <!-- Open Graph / Facebook / WhatsApp Preview -->
+
+    <!-- Open Graph / Facebook / WhatsApp / LinkedIn Preview -->
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="en_US" />
     <meta property="og:url" content="https://mtechsolutions.online/" />
-    <meta property="og:title" content="M-Tech Solutions | Custom Enterprise ERP, POS &amp; Web Apps" />
-    <meta property="og:description" content="High-performance custom digital products, retail POS, and wholesale ERP inventory platforms engineered by M-Tech Solutions. Get a free consultation." />
+    <meta property="og:title" content="M-Tech Solutions | Custom Enterprise ERP, Offline Mobile POS &amp; Web Apps" />
+    <meta property="og:description" content="High-performance custom Enterprise ERP, Offline-First Mobile POS, Mobile Parts Inventory SaaS, and Next.js Web Applications engineered by M-Tech Solutions. Rated 4.98/5 across 50+ systems." />
     <meta property="og:image" content="https://mtechsolutions.online/og-image.jpg" />
     <meta property="og:image:secure_url" content="https://mtechsolutions.online/og-image.jpg" />
     <meta property="og:image:type" content="image/jpeg" />
     <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="675" />
-    <meta property="og:image:alt" content="M-Tech Solutions Custom Enterprise Systems Banner" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="M-Tech Solutions — Custom Enterprise ERP, Offline Mobile POS &amp; Web Applications" />
     <meta property="og:site_name" content="M-Tech Solutions" />
 
-    <!-- Twitter Card -->
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content="https://mtechsolutions.online/" />
-    <meta property="twitter:title" content="M-Tech Solutions | Custom Enterprise ERP, POS &amp; Web Apps" />
-    <meta property="twitter:description" content="High-performance custom digital products, POS, and ERP inventory platforms engineered by M-Tech Solutions." />
-    <meta property="twitter:image" content="https://mtechsolutions.online/og-image.jpg" />
+    <!-- Twitter / X Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://mtechsolutions.online/" />
+    <meta name="twitter:title" content="M-Tech Solutions | Custom Enterprise ERP, Offline Mobile POS &amp; Web Apps" />
+    <meta name="twitter:description" content="Custom Enterprise ERP, Offline-First Mobile POS, Mobile Parts SaaS &amp; Next.js Web Platforms engineered by M-Tech Solutions (4.98★ across 50+ deployments)." />
+    <meta name="twitter:image" content="https://mtechsolutions.online/og-image.jpg" />
+    <meta name="twitter:image:alt" content="M-Tech Solutions Enterprise Software Architecture Banner" />
 
-    <!-- Google Analytics 4 Tag (GA4 Placeholder & Event Setup) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MEASUREMENT_ID"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-MEASUREMENT_ID', { send_page_view: true });
-    </script>
-
-    <!-- Comprehensive JSON-LD Structured Data Schema Graph for Search Engines & AI Overviews -->
+    <!-- Comprehensive JSON-LD Knowledge Graph for Google Search, Rich Results & AI Overviews -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -81,21 +94,83 @@
             "@id": "https://mtechsolutions.online/#website",
             "url": "https://mtechsolutions.online/",
             "name": "M-Tech Solutions",
-            "description": "Custom Enterprise Systems, Offline-First Mobile POS & Web Apps Development",
+            "alternateName": ["MTech Solutions", "mtechsolutions", "mtechsolutions.online"],
+            "description": "Custom Enterprise ERP Systems, Offline-First Mobile POS, Mobile Parts Inventory SaaS, LMS Portals & High-Performance Web Applications.",
             "publisher": {
               "@id": "https://mtechsolutions.online/#organization"
             },
             "inLanguage": "en-US"
           },
           {
+            "@type": "WebPage",
+            "@id": "https://mtechsolutions.online/#webpage",
+            "url": "https://mtechsolutions.online/",
+            "name": "M-Tech Solutions | Custom Enterprise ERP, Offline Mobile POS & Web App Development",
+            "isPartOf": {
+              "@id": "https://mtechsolutions.online/#website"
+            },
+            "about": {
+              "@id": "https://mtechsolutions.online/#organization"
+            },
+            "primaryImageOfPage": {
+              "@type": "ImageObject",
+              "url": "https://mtechsolutions.online/og-image.jpg",
+              "width": 1200,
+              "height": 630
+            },
+            "datePublished": "2026-06-25",
+            "dateModified": "2026-11-12",
+            "description": "M-Tech Solutions engineers custom Enterprise ERP, Offline-First Mobile POS, Mobile Parts Inventory SaaS, LMS Portals, and Next.js Web Applications for retail and wholesale businesses globally.",
+            "breadcrumb": {
+              "@id": "https://mtechsolutions.online/#breadcrumb"
+            },
+            "speakable": {
+              "@type": "SpeakableSpecification",
+              "cssSelector": ["h1", "#about h2", "#faq h3"]
+            },
+            "inLanguage": "en-US"
+          },
+          {
+            "@type": "Person",
+            "@id": "https://mtechsolutions.online/#founder",
+            "name": "Tuaha Afzal",
+            "alternateName": "Mian Tuaha Afzal",
+            "jobTitle": "Founder & Principal Software Architect",
+            "worksFor": {
+              "@id": "https://mtechsolutions.online/#organization"
+            },
+            "url": "https://mtechsolutions.online/",
+            "sameAs": [
+              "https://github.com/MIAN397",
+              "https://www.linkedin.com/in/tuaha-afzal-3883912a3/",
+              "https://portfolio1-omega-gold-99.vercel.app/"
+            ],
+            "knowsAbout": [
+              "Enterprise Resource Planning (ERP) Architecture",
+              "Offline-First Point of Sale (POS) Systems",
+              "Full-Stack JavaScript & TypeScript (React 19, Next.js, Node.js)",
+              "Firebase Cloud Architecture & Firestore Security",
+              "MongoDB & PostgreSQL High-Throughput Databases"
+            ]
+          },
+          {
             "@type": "Organization",
             "@id": "https://mtechsolutions.online/#organization",
             "name": "M-Tech Solutions",
-            "alternateName": ["mtechsolutions", "MTech Solutions", "MTech", "mtechsolutions.online"],
+            "legalName": "M-Tech Solutions",
+            "alternateName": ["mtechsolutions", "MTech Solutions", "M-Tech", "mtechsolutions.online"],
             "url": "https://mtechsolutions.online/",
-            "slogan": "Engineering High-Performance Custom Enterprise Systems",
+            "slogan": "We Shape Digital Leaders — Custom Enterprise ERP, Offline Mobile POS & Web Applications",
+            "foundingDate": "2024",
+            "founder": {
+              "@id": "https://mtechsolutions.online/#founder"
+            },
             "sameAs": [
-              "https://www.instagram.com/mtechsolutions.online/"
+              "https://github.com/MIAN397",
+              "https://www.linkedin.com/in/tuaha-afzal-3883912a3/",
+              "https://www.instagram.com/mtechsolutions.online/",
+              "https://cadets-coaching-academy-1234.web.app/",
+              "https://ccap-testportal.web.app/"
             ],
             "logo": {
               "@type": "ImageObject",
@@ -103,36 +178,56 @@
               "width": 512,
               "height": 512
             },
-            "contactPoint": {
-              "@type": "ContactPoint",
-              "telephone": "+923363800438",
-              "contactType": "customer service",
-              "email": "mtechsolutions.online@gmail.com",
-              "areaServed": "Global",
-              "availableLanguage": ["English", "Urdu"]
+            "image": "https://mtechsolutions.online/og-image.jpg",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Lahore",
+              "addressRegion": "Punjab",
+              "addressCountry": "PK"
             },
+            "contactPoint": [
+              {
+                "@type": "ContactPoint",
+                "telephone": "+923363800438",
+                "contactType": "sales",
+                "email": "mtechsolutions.online@gmail.com",
+                "areaServed": ["PK", "AE", "SA", "GB", "US", "Global"],
+                "availableLanguage": ["English", "Urdu"]
+              },
+              {
+                "@type": "ContactPoint",
+                "telephone": "+923363800438",
+                "contactType": "customer support",
+                "email": "mtechsolutions.online@gmail.com",
+                "areaServed": "Global",
+                "availableLanguage": ["English", "Urdu"]
+              }
+            ],
             "knowsAbout": [
               "Enterprise Resource Planning (ERP)",
-              "Point of Sale (POS) Systems",
-              "Mobile Parts Management Software",
-              "Inventory Management",
-              "Offline-First Web & Mobile Architecture",
-              "Hardware Integration (ESC/POS Thermal Printers, Barcode Scanners)",
-              "React",
+              "Offline-First Point of Sale (POS) Systems",
+              "Mobile Parts Wholesale & Compatibility Software",
+              "Multi-Warehouse Inventory Management",
+              "Learning Management Systems (LMS) & Computer-Based Testing (CBT)",
+              "Headless E-Commerce (Next.js & Shopify)",
+              "Hardware Integration (ESC/POS Thermal Printers, Barcode Scanners, Cash Drawers)",
+              "React 19",
               "Next.js",
+              "React Native",
               "Node.js",
-              "Firebase",
-              "Tailwind CSS",
+              "Firebase Firestore",
+              "MongoDB",
               "PostgreSQL"
             ]
           },
           {
             "@type": "ProfessionalService",
             "@id": "https://mtechsolutions.online/#service",
-            "name": "M-Tech Solutions Enterprise Software Engineering",
+            "name": "M-Tech Solutions — Custom Enterprise Software, ERP & POS Engineering",
             "url": "https://mtechsolutions.online/",
             "image": "https://mtechsolutions.online/og-image.jpg",
-            "description": "M-Tech Solutions scales businesses by building high-performance, custom digital products. Specializing in retail POS, wholesale Inventory ERP, mobile parts systems, and custom web applications.",
+            "logo": "https://mtechsolutions.online/favicon-512x512.png",
+            "description": "M-Tech Solutions engineers custom digital products for retail, wholesale, academic, and enterprise operations—specializing in Multi-Branch Inventory ERPs, Offline-First Mobile POS, Mobile Parts SaaS, LMS/CBT Portals, and Next.js Web Applications.",
             "telephone": "+923363800438",
             "email": "mtechsolutions.online@gmail.com",
             "priceRange": "$$",
@@ -142,6 +237,18 @@
               "addressRegion": "Punjab",
               "addressCountry": "PK"
             },
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": 31.5204,
+              "longitude": 74.3587
+            },
+            "areaServed": [
+              { "@type": "Country", "name": "Pakistan" },
+              { "@type": "Country", "name": "United Arab Emirates" },
+              { "@type": "Country", "name": "Saudi Arabia" },
+              { "@type": "Country", "name": "United Kingdom" },
+              { "@type": "Country", "name": "United States" }
+            ],
             "openingHoursSpecification": [
               {
                 "@type": "OpeningHoursSpecification",
@@ -154,47 +261,146 @@
               "@type": "AggregateRating",
               "ratingValue": "4.98",
               "bestRating": "5",
+              "worstRating": "1",
               "ratingCount": "50",
               "reviewCount": "50"
             },
+            "review": [
+              {
+                "@type": "Review",
+                "author": { "@type": "Person", "name": "Adil Raza" },
+                "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+                "reviewBody": "M-Tech Solutions engineered a custom Next.js headless Shopify storefront integrated directly with our retail warehouse database. Site performance skyrocketed (+320% speed), and multi-branch inventory mismatches dropped to zero."
+              },
+              {
+                "@type": "Review",
+                "author": { "@type": "Person", "name": "Muhammad Usama" },
+                "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+                "reviewBody": "The mobile POS app changed the way counter sales and warehouse technicians operate. Even during internet outages in our storage basement, transactions queue locally and sync automatically when reconnected."
+              },
+              {
+                "@type": "Review",
+                "author": { "@type": "Person", "name": "Ali Khan" },
+                "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+                "reviewBody": "Their compound SKU and serial tracking system cut our wholesale invoicing time from minutes down to milliseconds (<100ms query). The custom MongoDB aggregation pipeline and clean web interface make daily operations effortless."
+              },
+              {
+                "@type": "Review",
+                "author": { "@type": "Person", "name": "Dr. Tariq Mahmood" },
+                "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+                "reviewBody": "During peak examination enrollment, our student web portal sustained over 15,000 active concurrent users without any lag. Instant payment processing callbacks and intuitive dashboard design made it a huge success."
+              }
+            ],
             "hasOfferCatalog": {
               "@type": "OfferCatalog",
-              "name": "Software Development Services",
+              "name": "Enterprise Software Development Services",
               "itemListElement": [
                 {
                   "@type": "Offer",
+                  "url": "https://mtechsolutions.online/erp-software",
                   "itemOffered": {
                     "@type": "Service",
-                    "name": "Custom ERP & Inventory Management Systems",
-                    "description": "Multi-branch stock transfers, supplier ledger, landed cost calculations, and automated re-ordering thresholds."
+                    "name": "Custom ERP & Wholesale Inventory Management Systems",
+                    "description": "Multi-branch stock transfers, supplier & customer ledgers, landed cost calculations, batch/IMEI serial tracking, and automated re-ordering thresholds."
                   }
                 },
                 {
                   "@type": "Offer",
+                  "url": "https://mtechsolutions.online/pos-system",
                   "itemOffered": {
                     "@type": "Service",
-                    "name": "Offline-First Mobile POS Systems",
-                    "description": "Cross-platform point of sale with local SQLite/IndexedDB caching, hardware bridging with ESC/POS printers, and auto-sync."
+                    "name": "Offline-First Mobile & Retail POS Systems",
+                    "description": "Cross-platform Point of Sale (iOS, Android, Windows, Web) with local IndexedDB/SQLite caching, ESC/POS thermal printer hardware bridging, barcode scanning, and deterministic cloud sync."
                   }
                 },
                 {
                   "@type": "Offer",
+                  "url": "https://mtechsolutions.online/erp-software",
                   "itemOffered": {
                     "@type": "Service",
-                    "name": "Mobile Parts Compatibility & Inventory Platforms",
-                    "description": "Specialized wholesale cataloging for smartphone LCDs, IC chips, flex cables, with IMEI/serial tracking and RMA warranty management."
+                    "name": "Mobile Parts Compatibility & Wholesale Distribution ERP",
+                    "description": "Specialized cataloging for smartphone LCD/OLED screens, IC chips, flex cables, and batteries with cross-model compatibility matrices, RMA warranty tracking, and tiered B2B pricing."
                   }
                 },
                 {
                   "@type": "Offer",
+                  "url": "https://mtechsolutions.online/services",
                   "itemOffered": {
                     "@type": "Service",
-                    "name": "Headless E-Commerce & Full-Stack Web Apps",
-                    "description": "High-speed custom storefronts, payment gateway integration, WhatsApp notification automation, and telemetry dashboards."
+                    "name": "Headless E-Commerce & High-Speed Next.js Web Applications",
+                    "description": "Sub-second custom storefronts, Shopify Storefront API integration, localized payment gateways, WhatsApp order automation, and real-time telemetry dashboards."
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "url": "https://mtechsolutions.online/portfolio",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Learning Management Systems (LMS) & Computer-Based Testing (CBT) Portals",
+                    "description": "High-concurrency educational portals featuring timed MCQ examination simulators, instant grading engines, student cohort management, and faculty command centers."
                   }
                 }
               ]
             }
+          },
+          {
+            "@type": "ItemList",
+            "@id": "https://mtechsolutions.online/#portfolio-list",
+            "name": "Shipped Software Systems & Live Web Applications by M-Tech Solutions",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "item": {
+                  "@type": "WebApplication",
+                  "name": "Cadets Coaching Academy — Production LMS & Admissions Portal",
+                  "url": "https://cadets-coaching-academy-1234.web.app/",
+                  "applicationCategory": "EducationalApplication",
+                  "operatingSystem": "Web, iOS, Android",
+                  "author": { "@id": "https://mtechsolutions.online/#organization" },
+                  "description": "Live full-stack academy LMS combining FBISE/Punjab Board education (Classes 1–10) with Armed Forces pre-commissioning, 750+ question CBT simulator, and faculty administration."
+                }
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "item": {
+                  "@type": "WebApplication",
+                  "name": "CCA Examination & Testing Portal (CBT SaaS)",
+                  "url": "https://ccap-testportal.web.app/",
+                  "applicationCategory": "EducationalApplication",
+                  "operatingSystem": "Web, iOS, Android",
+                  "author": { "@id": "https://mtechsolutions.online/#organization" },
+                  "description": "Live high-stakes Computer-Based Testing (CBT) platform with timed MCQ assessments, cohort directories, instant grading engine, and Firebase Cloud Multi-Sync."
+                }
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "item": {
+                  "@type": "SoftwareApplication",
+                  "name": "M-Tech Mobile Parts ERP & Wholesale Distribution SaaS",
+                  "url": "https://mtechsolutions.online/erp-software",
+                  "applicationCategory": "BusinessApplication",
+                  "operatingSystem": "Web, Windows, macOS, iOS, Android",
+                  "author": { "@id": "https://mtechsolutions.online/#organization" },
+                  "description": "Enterprise wholesale ERP with compound SKU/IMEI indexing, cross-model mobile component compatibility matrix, multi-branch stock transfers, and <100ms MongoDB aggregation pipelines."
+                }
+              },
+              {
+                "@type": "ListItem",
+                "position": 4,
+                "item": {
+                  "@type": "SoftwareApplication",
+                  "name": "M-Tech Offline-First Mobile POS System",
+                  "url": "https://mtechsolutions.online/pos-system",
+                  "applicationCategory": "BusinessApplication",
+                  "operatingSystem": "iOS, Android, Windows, Web",
+                  "author": { "@id": "https://mtechsolutions.online/#organization" },
+                  "description": "Offline-first retail and wholesale Point of Sale application with IndexedDB/SQLite local caching, ESC/POS thermal printer integration, barcode scanning, and background cloud sync."
+                }
+              }
+            ]
           },
           {
             "@type": "BreadcrumbList",
@@ -209,26 +415,38 @@
               {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "Services",
-                "item": "https://mtechsolutions.online/#services"
+                "name": "Custom ERP Software",
+                "item": "https://mtechsolutions.online/erp-software"
               },
               {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "Portfolio",
-                "item": "https://mtechsolutions.online/#portfolio"
+                "name": "Offline Mobile POS",
+                "item": "https://mtechsolutions.online/pos-system"
               },
               {
                 "@type": "ListItem",
                 "position": 4,
-                "name": "FAQ",
-                "item": "https://mtechsolutions.online/#faq"
+                "name": "Services",
+                "item": "https://mtechsolutions.online/services"
               },
               {
                 "@type": "ListItem",
                 "position": 5,
-                "name": "Contact",
-                "item": "https://mtechsolutions.online/#contact"
+                "name": "Live Portfolio",
+                "item": "https://mtechsolutions.online/portfolio"
+              },
+              {
+                "@type": "ListItem",
+                "position": 6,
+                "name": "FAQ",
+                "item": "https://mtechsolutions.online/faq"
+              },
+              {
+                "@type": "ListItem",
+                "position": 7,
+                "name": "Contact & Free Quote",
+                "item": "https://mtechsolutions.online/contact"
               }
             ]
           },
@@ -241,39 +459,63 @@
                 "name": "What custom software development services does M-Tech Solutions offer?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "We specialize in end-to-end custom software engineering including Wholesale & Retail ERP systems, Mobile POS applications (iOS/Android with offline synchronization), Headless E-Commerce storefronts (Next.js/Shopify), real-time telemetry dashboards, and enterprise API microservices."
+                  "text": "M-Tech Solutions specializes in end-to-end custom software engineering including Wholesale & Retail ERP systems, Offline-First Mobile POS applications (iOS, Android & Desktop with automatic cloud sync), Mobile Parts compatibility & distribution ERPs, Learning Management Systems (LMS) & CBT Examination Portals, Headless E-Commerce storefronts (Next.js/Shopify), real-time telemetry dashboards, and enterprise API microservices."
                 }
               },
               {
                 "@type": "Question",
-                "name": "How do offline-first POS systems handle internet outages?",
+                "name": "How do M-Tech Solutions offline-first POS systems handle internet outages?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Our mobile POS applications are built using local storage (IndexedDB/SQLite) and dedicated background sync workers. When internet connectivity drops, billing, barcode scanning, and invoice printing continue seamlessly. When connection is restored, transactions reconcile and sync automatically with your central database."
+                  "text": "Our mobile and desktop POS applications are engineered using local-first storage (IndexedDB and SQLite) paired with dedicated background sync workers and deterministic conflict resolution. When internet connectivity drops, barcode scanning, invoice billing, customer ledger updates, and thermal receipt printing continue at 100% speed with zero downtime. Once connectivity returns, queued transactions automatically reconcile and sync with your central cloud database."
                 }
               },
               {
                 "@type": "Question",
-                "name": "Can your ERP integrate with our existing barcodes, printers, and legacy databases?",
+                "name": "Can your custom ERP integrate with existing barcode scanners, thermal printers, and legacy databases?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Yes. We engineer customized hardware bridges and API adapters that integrate with ESC/POS thermal receipt printers, handheld barcode/2D scanners, electronic cash drawers, and legacy SQL/Excel inventory exports without replacing your current physical infrastructure."
+                  "text": "Yes. We engineer customized hardware bridges (WebUSB, Web Bluetooth, raw TCP/IP socket printing, and serial COM adapters) that integrate seamlessly with 80mm/58mm ESC/POS thermal receipt printers, handheld 1D/2D barcode and QR scanners, electronic cash drawers (RJ11/RJ12), label printers, and legacy SQL/Excel inventory exports without replacing your existing physical hardware."
                 }
               },
               {
                 "@type": "Question",
-                "name": "What is the typical timeline and process for a custom project?",
+                "name": "What makes your Mobile Parts & Wholesale Distribution ERP unique?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Standard custom platforms are delivered in 2 to 6 weeks depending on feature complexity. Our process includes Discovery & System Architecture, Rapid Interactive Prototyping, Scalable Full-Stack Development, Rigorous Stress Testing, and Final Production Deployment with staff onboarding."
+                  "text": "Our Mobile Parts ERP is purpose-built for electronics and component wholesalers. It features hierarchical categorization for LCD/OLED screens, IC chips, flex cables, and batteries, cross-model compatibility matrices across smartphone generations, IMEI and serial number batch tracking, RMA warranty claim verification, multi-branch stock transfers, landed cost calculation, and tiered B2B/VIP wholesale pricing."
                 }
               },
               {
                 "@type": "Question",
-                "name": "How can we get a free quotation and architectural consultation?",
+                "name": "Do you build custom Learning Management Systems (LMS) and Computer-Based Testing (CBT) portals?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "You can reach us directly on WhatsApp (+92 336 3800438), call our direct line, or send an email inquiry through our contact form. We provide a detailed scope analysis, tech stack recommendation, and fixed milestone pricing at zero upfront cost."
+                  "text": "Yes. We have engineered and deployed production academic platforms such as the Cadets Coaching Academy LMS and the CCA Examination & Testing Portal, supporting 15,000+ concurrent student sessions, timed MCQ exam simulators, automated instant grading, cohort management, and multi-role faculty administration."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What technology stack does M-Tech Solutions use for enterprise web and mobile apps?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "We build with modern, battle-tested technologies: React 19, Next.js, TypeScript, Tailwind CSS, and GSAP for sub-second frontends; React Native and Flutter for cross-platform mobile apps; and Node.js, Express, Firebase (Firestore, Realtime DB, Auth, Hosting), PostgreSQL, and MongoDB for high-throughput, zero-trust cloud backends."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What is the typical delivery timeline and pricing model for a custom software project?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Standard custom platforms are delivered in 2 to 6 weeks depending on module complexity. We follow an agile milestone workflow: 1) Discovery & System Architecture, 2) Interactive UI/UX Prototyping, 3) Full-Stack Sprint Engineering, 4) Stress Testing & Hardware Verification, and 5) Production Deployment with staff training. All projects use transparent, fixed-milestone pricing with zero hidden fees."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How can we get a free quotation and architectural consultation from M-Tech Solutions?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "You can message or call us directly on WhatsApp at +92 336 3800438, email mtechsolutions.online@gmail.com, or click 'Start Your Project' on our website (https://mtechsolutions.online/). Our principal software architect Tuaha Afzal provides a comprehensive scope analysis, database architecture recommendation, and fixed-milestone quotation at zero upfront cost."
                 }
               }
             ]
@@ -287,30 +529,231 @@
     <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    
+
     <!-- Syne (Display) and Plus Jakarta Sans (Sans) fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Syne:wght@500;700;800&display=swap" rel="stylesheet" />
   </head>
-  <body class="overflow-x-hidden selection:bg-accent selection:text-white antialiased">
-    <!-- Pre-rendered Semantic Fallback for Instant Non-JS Crawlers & AI Agent Scrapers -->
-    <noscript>
-      <div style="padding: 2rem; max-width: 800px; margin: auto; font-family: sans-serif; color: #333; background: #fff;">
-        <h1>M-Tech Solutions — Custom Enterprise ERP, POS & Web Applications</h1>
-        <p>M-Tech Solutions builds high-performance custom digital products, offline-first mobile Point of Sale (POS), wholesale inventory ERP platforms, and custom web applications.</p>
-        <h2>Our Services</h2>
-        <ul>
-          <li><strong>Custom ERP & Inventory Management:</strong> Multi-branch inventory tracking, supplier ledgers, landed cost calculation, and re-ordering alerts.</li>
-          <li><strong>Offline-First Mobile POS:</strong> Seamless billing, thermal printer hardware bridging (ESC/POS), and offline SQLite/IndexedDB sync.</li>
-          <li><strong>Mobile Parts ERP Platform:</strong> Specialized cataloging for smartphone LCDs, IC chips, flex cables, and repair tracking.</li>
-          <li><strong>Headless E-Commerce & Full-Stack Web Apps:</strong> High-speed React, Next.js, and Firebase applications.</li>
-        </ul>
-        <h2>Contact & Free Project Quote</h2>
-        <p>Phone & WhatsApp: <strong>+92 336 3800438</strong> | Email: <strong>mtechsolutions.online@gmail.com</strong></p>
-        <p>Full machine-readable specification: <a href="/llms.txt">llms.txt</a> | <a href="/sitemap.xml">sitemap.xml</a></p>
-      </div>
-    </noscript>
+  <body class="overflow-x-hidden selection:bg-accent selection:text-white antialiased bg-[#090d16] text-[#f3f4f6]">
+    <!--
+      Pre-Rendered Semantic DOM inside #root:
+      Instantly indexed by Googlebot (first wave), Bingbot, GPTBot, OAI-SearchBot,
+      PerplexityBot, ClaudeBot, Applebot-Extended, and HTML-to-Markdown extractors
+      before client-side JavaScript executes, then seamlessly hydrated/replaced by React 19.
+    -->
+    <div id="root">
+      <header style="max-width:1200px;margin:0 auto;padding:1.5rem 1.5rem;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid rgba(255,255,255,0.08);">
+        <a href="https://mtechsolutions.online/" style="font-weight:800;font-size:1.25rem;color:#ffffff;text-decoration:none;">
+          M-Tech <span style="color:#2f57ff;">Solutions</span>
+        </a>
+        <nav aria-label="Primary Navigation" style="display:flex;gap:1.25rem;flex-wrap:wrap;font-size:0.875rem;">
+          <a href="https://mtechsolutions.online/#about" style="color:#9ca3af;text-decoration:none;">About</a>
+          <a href="https://mtechsolutions.online/erp-software" style="color:#9ca3af;text-decoration:none;">Custom ERP</a>
+          <a href="https://mtechsolutions.online/pos-system" style="color:#9ca3af;text-decoration:none;">Offline POS</a>
+          <a href="https://mtechsolutions.online/services" style="color:#9ca3af;text-decoration:none;">Services</a>
+          <a href="https://mtechsolutions.online/portfolio" style="color:#9ca3af;text-decoration:none;">Live Portfolio</a>
+          <a href="https://mtechsolutions.online/faq" style="color:#9ca3af;text-decoration:none;">FAQ</a>
+          <a href="https://mtechsolutions.online/contact" style="color:#2f57ff;font-weight:700;text-decoration:none;">Free Quote</a>
+        </nav>
+      </header>
 
-    <div id="root"></div>
+      <main style="max-width:1200px;margin:0 auto;padding:2.5rem 1.5rem;line-height:1.65;">
+        <section id="home" style="padding:2rem 0 3rem;border-bottom:1px solid rgba(255,255,255,0.08);">
+          <p style="font-size:0.85rem;font-weight:700;color:#fbbf24;margin-bottom:0.75rem;">
+            ★★★★★ 4.98 / 5.0 Average Client Rating • 50+ Enterprise Software Systems Delivered • 99.9% System Uptime
+          </p>
+          <h1 style="font-size:2.5rem;font-weight:800;line-height:1.15;color:#ffffff;margin:0 0 1rem;">
+            M-Tech Solutions — Custom Enterprise ERP, Offline-First Mobile POS &amp; Web Application Development
+          </h1>
+          <p style="font-size:1.125rem;color:#d1d5db;max-width:850px;margin-bottom:1.5rem;">
+            <strong>M-Tech Solutions</strong> (<a href="https://mtechsolutions.online/" style="color:#60a5fa;">mtechsolutions.online</a>), founded and led by Principal Software Architect <strong>Tuaha Afzal</strong> in Lahore, Pakistan, engineers mission-critical digital products for retail chains, wholesale distributors, mobile parts importers, educational institutions, and global enterprises.
+          </p>
+          <p style="margin-bottom:1rem;">
+            <a href="https://mtechsolutions.online/contact" style="display:inline-block;background:#2f57ff;color:#ffffff;padding:0.75rem 1.5rem;border-radius:9999px;font-weight:700;text-decoration:none;margin-right:0.75rem;">Start Your Project — Free Quote</a>
+            <a href="https://wa.me/923363800438?text=Hi%20M-Tech%20Solutions,%20I'd%20like%20to%20discuss%20a%20custom%20software%20project" style="display:inline-block;border:1px solid rgba(255,255,255,0.2);color:#ffffff;padding:0.75rem 1.5rem;border-radius:9999px;font-weight:700;text-decoration:none;">Chat on WhatsApp (+92 336 3800438)</a>
+          </p>
+        </section>
+
+        <section id="about" style="padding:2.5rem 0;border-bottom:1px solid rgba(255,255,255,0.08);">
+          <h2 style="font-size:1.75rem;font-weight:800;color:#ffffff;margin-bottom:1rem;">
+            Why Leading Businesses Choose M-Tech Solutions
+          </h2>
+          <p style="color:#d1d5db;margin-bottom:1.25rem;">
+            We build software for businesses that value speed, modern design, and zero-downtime reliability. Unlike generic off-the-shelf templates, every M-Tech Solutions architecture is custom-engineered around your exact operational workflow—delivering sub-100ms database queries, true offline-first resilience during internet outages, and 99–100 Google Lighthouse performance scores.
+          </p>
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem;">
+            <article style="padding:1rem;border:1px solid rgba(255,255,255,0.1);border-radius:1rem;">
+              <h3 style="font-size:1.05rem;font-weight:700;color:#60a5fa;margin-bottom:0.5rem;">Custom ERP Systems</h3>
+              <p style="font-size:0.9rem;color:#9ca3af;">Multi-branch inventory control, automated double-entry accounting, supplier &amp; customer ledgers, landed cost calculation, and live profit margin analytics.</p>
+            </article>
+            <article style="padding:1rem;border:1px solid rgba(255,255,255,0.1);border-radius:1rem;">
+              <h3 style="font-size:1.05rem;font-weight:700;color:#38bdf8;margin-bottom:0.5rem;">Offline-First Mobile POS</h3>
+              <p style="font-size:0.9rem;color:#9ca3af;">Barcode &amp; QR scanning, instant invoice generation, 80mm/58mm ESC/POS thermal printer bridging, and automatic IndexedDB/SQLite background cloud sync.</p>
+            </article>
+            <article style="padding:1rem;border:1px solid rgba(255,255,255,0.1);border-radius:1rem;">
+              <h3 style="font-size:1.05rem;font-weight:700;color:#34d399;margin-bottom:0.5rem;">Headless E-Commerce &amp; Web Apps</h3>
+              <p style="font-size:0.9rem;color:#9ca3af;">Sub-second Next.js &amp; React 19 web storefronts with automated Shopify/warehouse inventory linkage, localized checkouts, and WhatsApp order bots.</p>
+            </article>
+            <article style="padding:1rem;border:1px solid rgba(255,255,255,0.1);border-radius:1rem;">
+              <h3 style="font-size:1.05rem;font-weight:700;color:#c084fc;margin-bottom:0.5rem;">LMS &amp; CBT Exam Portals</h3>
+              <p style="font-size:0.9rem;color:#9ca3af;">High-concurrency educational portals supporting 15,000+ simultaneous student sessions, timed MCQ exam simulators, instant scoring, and cohort management.</p>
+            </article>
+          </div>
+        </section>
+
+        <section id="services" style="padding:2.5rem 0;border-bottom:1px solid rgba(255,255,255,0.08);">
+          <h2 style="font-size:1.75rem;font-weight:800;color:#ffffff;margin-bottom:1rem;">
+            Enterprise Software Engineering Services
+          </h2>
+          <ul style="color:#d1d5db;padding-left:1.25rem;">
+            <li style="margin-bottom:0.75rem;">
+              <strong><a href="https://mtechsolutions.online/erp-software" style="color:#60a5fa;">Custom ERP &amp; Wholesale Inventory Management</a>:</strong> Multi-warehouse stock transfers, Purchase Order &amp; GRN automation, supplier payable/receivable aging, role-based access control (RBAC), and real-time executive reporting.
+            </li>
+            <li style="margin-bottom:0.75rem;">
+              <strong><a href="https://mtechsolutions.online/pos-system" style="color:#60a5fa;">Offline-First Mobile &amp; Retail POS Applications</a>:</strong> Native iOS, Android, Windows, and Web POS engineered with React Native, Flutter, IndexedDB, and SQLite. Continues billing, scanning, and printing receipts with zero internet connection.
+            </li>
+            <li style="margin-bottom:0.75rem;">
+              <strong><a href="https://mtechsolutions.online/erp-software" style="color:#60a5fa;">Mobile Parts &amp; Electronics Wholesale ERP Platform</a>:</strong> Purpose-built taxonomy for smartphone LCD/OLED screens, IC chips, flex cables, housing, and batteries with cross-model compatibility matrices, IMEI/serial batch tracking, and RMA warranty verification.
+            </li>
+            <li style="margin-bottom:0.75rem;">
+              <strong><a href="https://mtechsolutions.online/services" style="color:#60a5fa;">Headless E-Commerce &amp; Full-Stack Web Applications</a>:</strong> High-conversion React 19, Next.js, TypeScript, and Tailwind CSS web platforms linked directly to real-time ERP databases and payment gateways.
+            </li>
+            <li style="margin-bottom:0.75rem;">
+              <strong><a href="https://mtechsolutions.online/services" style="color:#60a5fa;">Real-Time Telemetry &amp; Analytics Dashboards</a>:</strong> Live profit margin calculations, automated low-stock alerts, financial ledger summaries, and WebSocket executive visualizations.
+            </li>
+            <li style="margin-bottom:0.75rem;">
+              <strong><a href="https://mtechsolutions.online/services" style="color:#60a5fa;">Scalable API Microservices &amp; Cloud Security</a>:</strong> Node.js, Express, Firebase Firestore, PostgreSQL, and MongoDB backends with compound indexing, zero-trust security rules, and automated daily cloud backups.
+            </li>
+          </ul>
+        </section>
+
+        <section id="portfolio" style="padding:2.5rem 0;border-bottom:1px solid rgba(255,255,255,0.08);">
+          <h2 style="font-size:1.75rem;font-weight:800;color:#ffffff;margin-bottom:1rem;">
+            Shipped Production Projects &amp; Live Case Studies
+          </h2>
+          <p style="color:#d1d5db;margin-bottom:1.25rem;">
+            Explore verified, live production applications engineered and deployed by <strong>Tuaha Afzal</strong> and the <strong>M-Tech Solutions</strong> engineering team:
+          </p>
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.25rem;">
+            <article style="padding:1.25rem;border:1px solid rgba(255,255,255,0.1);border-radius:1rem;">
+              <h3 style="font-size:1.15rem;font-weight:700;color:#ffffff;margin-bottom:0.35rem;">
+                1. Cadets Coaching Academy — Production LMS &amp; Admissions Portal
+              </h3>
+              <p style="font-size:0.9rem;color:#9ca3af;margin-bottom:0.75rem;">
+                Full-stack academy Learning Management System combining Board education (Classes 1–10 FBISE/Punjab) with military &amp; armed forces pre-commissioning, 1:15 small batch tracking, 750+ question interactive CBT exam simulator, and faculty administration. Built with React 19, TypeScript, Vite 8, and Firebase Firestore.
+              </p>
+              <p style="font-size:0.85rem;">
+                <a href="https://cadets-coaching-academy-1234.web.app/" target="_blank" rel="noopener noreferrer" style="color:#60a5fa;font-weight:700;margin-right:1rem;">Visit Live Web App ↗</a>
+                <a href="https://github.com/MIAN397/cadets-coaching-academy" target="_blank" rel="noopener noreferrer" style="color:#9ca3af;">GitHub Source Code ↗</a>
+              </p>
+            </article>
+
+            <article style="padding:1.25rem;border:1px solid rgba(255,255,255,0.1);border-radius:1rem;">
+              <h3 style="font-size:1.15rem;font-weight:700;color:#ffffff;margin-bottom:0.35rem;">
+                2. CCA Examination &amp; Testing Portal — Computer-Based Testing (CBT) SaaS
+              </h3>
+              <p style="font-size:0.9rem;color:#9ca3af;margin-bottom:0.75rem;">
+                High-concurrency Computer-Based Testing (CBT) portal and Faculty Command Center. Features timed MCQ assessments, cohort student directories (PAF College Sargodha Prep &amp; Military Colleges), instant automated scoring engines, quiz bank archives, and real-time Firebase Cloud Multi-Sync.
+              </p>
+              <p style="font-size:0.85rem;">
+                <a href="https://ccap-testportal.web.app/" target="_blank" rel="noopener noreferrer" style="color:#60a5fa;font-weight:700;margin-right:1rem;">Visit Live Web App ↗</a>
+                <a href="https://github.com/MIAN397/CCA-Test-portal" target="_blank" rel="noopener noreferrer" style="color:#9ca3af;">GitHub Source Code ↗</a>
+              </p>
+            </article>
+
+            <article style="padding:1.25rem;border:1px solid rgba(255,255,255,0.1);border-radius:1rem;">
+              <h3 style="font-size:1.15rem;font-weight:700;color:#ffffff;margin-bottom:0.35rem;">
+                3. Mobile Parts ERP SaaS — Enterprise Wholesale Distribution System
+              </h3>
+              <p style="font-size:0.9rem;color:#9ca3af;margin-bottom:0.75rem;">
+                Next-generation wholesale ERP engineered for mobile components distribution. Features compound SKU/IMEI databases, cross-model compatibility indexing, advanced MongoDB aggregation pipelines (&lt;100ms query latency) for real-time profit margin tracking, and multi-branch stock reconciliation.
+              </p>
+              <p style="font-size:0.85rem;">
+                <a href="https://mtechsolutions.online/erp-software" style="color:#60a5fa;font-weight:700;">View ERP Architecture Specification →</a>
+              </p>
+            </article>
+
+            <article style="padding:1.25rem;border:1px solid rgba(255,255,255,0.1);border-radius:1rem;">
+              <h3 style="font-size:1.15rem;font-weight:700;color:#ffffff;margin-bottom:0.35rem;">
+                4. Offline-First Mobile POS System — Retail &amp; Wholesale Point of Sale
+              </h3>
+              <p style="font-size:0.9rem;color:#9ca3af;margin-bottom:0.75rem;">
+                Cross-platform mobile and desktop POS application featuring continuous barcode scanner integration, ESC/POS thermal receipt printing, and local IndexedDB/SQLite cache reconciliation that queues invoices offline and syncs automatically in the background.
+              </p>
+              <p style="font-size:0.85rem;">
+                <a href="https://mtechsolutions.online/pos-system" style="color:#60a5fa;font-weight:700;">View Offline POS Architecture →</a>
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <section id="reviews" style="padding:2.5rem 0;border-bottom:1px solid rgba(255,255,255,0.08);">
+          <h2 style="font-size:1.75rem;font-weight:800;color:#ffffff;margin-bottom:1rem;">
+            Verified Client Reviews &amp; Performance Benchmarks (4.98 / 5 Rating)
+          </h2>
+          <ul style="color:#d1d5db;padding-left:1.25rem;">
+            <li style="margin-bottom:0.75rem;">
+              <strong>Adil Raza (Director of Operations, Adil Computers &amp; Retail Store) — +320% Speed:</strong> &ldquo;M-Tech Solutions engineered a custom Next.js headless Shopify storefront integrated directly with our retail warehouse database. Site performance skyrocketed, and multi-branch inventory mismatches dropped to zero.&rdquo;
+            </li>
+            <li style="margin-bottom:0.75rem;">
+              <strong>Muhammad Usama (General Manager, Al-Razaq Mobile Components) — 100% Zero-Downtime:</strong> &ldquo;The mobile POS app changed the way counter sales and warehouse technicians operate. Even during internet outages in our storage basement, transactions queue locally and sync automatically when reconnected.&rdquo;
+            </li>
+            <li style="margin-bottom:0.75rem;">
+              <strong>Ali Khan (Co-Founder &amp; CTO, Apex Logistics &amp; Trade) — &lt;100ms Query Speed:</strong> &ldquo;Their compound SKU and serial tracking system cut our wholesale invoicing time from minutes down to milliseconds. The custom MongoDB aggregation pipeline and clean web interface make daily operations effortless.&rdquo;
+            </li>
+            <li style="margin-bottom:0.75rem;">
+              <strong>Dr. Tariq Mahmood (Academic Director, FutureGen Education Portal) — 15,000+ Concurrent Sessions:</strong> &ldquo;During peak examination enrollment, our student web portal sustained over 15,000 active concurrent users without any lag.&rdquo;
+            </li>
+            <li style="margin-bottom:0.75rem;">
+              <strong>Saad Ahmed (VP of Product, QuickServe Retail Apps) — 99.98% Crash-Free:</strong> &ldquo;M-Tech Solutions built an extremely stable mobile scanning and billing app for our store staff. Barcode reading speed is instantaneous.&rdquo;
+            </li>
+          </ul>
+        </section>
+
+        <section id="faq" style="padding:2.5rem 0;border-bottom:1px solid rgba(255,255,255,0.08);">
+          <h2 style="font-size:1.75rem;font-weight:800;color:#ffffff;margin-bottom:1rem;">
+            Frequently Asked Questions (FAQ)
+          </h2>
+          <dl style="color:#d1d5db;">
+            <dt style="font-weight:700;color:#ffffff;margin-top:1rem;">1. What custom software development services does M-Tech Solutions offer?</dt>
+            <dd style="margin-left:0;color:#9ca3af;">M-Tech Solutions specializes in end-to-end custom software engineering including Wholesale &amp; Retail ERP systems, Offline-First Mobile POS applications (iOS, Android &amp; Desktop with automatic cloud sync), Mobile Parts compatibility &amp; distribution ERPs, Learning Management Systems (LMS) &amp; CBT Examination Portals, Headless E-Commerce storefronts (Next.js/Shopify), real-time telemetry dashboards, and enterprise API microservices.</dd>
+
+            <dt style="font-weight:700;color:#ffffff;margin-top:1rem;">2. How do M-Tech Solutions offline-first POS systems handle internet outages?</dt>
+            <dd style="margin-left:0;color:#9ca3af;">Our mobile and desktop POS applications are engineered using local-first storage (IndexedDB and SQLite) paired with dedicated background sync workers and deterministic conflict resolution. When internet connectivity drops, barcode scanning, invoice billing, customer ledger updates, and thermal receipt printing continue at 100% speed with zero downtime. Once connectivity returns, queued transactions automatically reconcile and sync with your central cloud database.</dd>
+
+            <dt style="font-weight:700;color:#ffffff;margin-top:1rem;">3. Can your custom ERP integrate with existing barcode scanners, thermal printers, and legacy databases?</dt>
+            <dd style="margin-left:0;color:#9ca3af;">Yes. We engineer customized hardware bridges (WebUSB, Web Bluetooth, raw TCP/IP socket printing, and serial COM adapters) that integrate seamlessly with 80mm/58mm ESC/POS thermal receipt printers, handheld 1D/2D barcode and QR scanners, electronic cash drawers (RJ11/RJ12), label printers, and legacy SQL/Excel inventory exports without replacing your existing physical hardware.</dd>
+
+            <dt style="font-weight:700;color:#ffffff;margin-top:1rem;">4. What makes your Mobile Parts &amp; Wholesale Distribution ERP unique?</dt>
+            <dd style="margin-left:0;color:#9ca3af;">Our Mobile Parts ERP is purpose-built for electronics and component wholesalers. It features hierarchical categorization for LCD/OLED screens, IC chips, flex cables, and batteries, cross-model compatibility matrices across smartphone generations, IMEI and serial number batch tracking, RMA warranty claim verification, multi-branch stock transfers, landed cost calculation, and tiered B2B/VIP wholesale pricing.</dd>
+
+            <dt style="font-weight:700;color:#ffffff;margin-top:1rem;">5. Do you build custom Learning Management Systems (LMS) and Computer-Based Testing (CBT) portals?</dt>
+            <dd style="margin-left:0;color:#9ca3af;">Yes. We have engineered and deployed production academic platforms such as the Cadets Coaching Academy LMS and the CCA Examination &amp; Testing Portal, supporting 15,000+ concurrent student sessions, timed MCQ exam simulators, automated instant grading, cohort management, and multi-role faculty administration.</dd>
+
+            <dt style="font-weight:700;color:#ffffff;margin-top:1rem;">6. What is the typical delivery timeline and pricing model for a custom software project?</dt>
+            <dd style="margin-left:0;color:#9ca3af;">Standard custom platforms are delivered in 2 to 6 weeks depending on module complexity using transparent, fixed-milestone pricing. Contact us for a free architectural consultation and project quote.</dd>
+          </dl>
+        </section>
+      </main>
+
+      <footer id="contact" style="max-width:1200px;margin:0 auto;padding:2rem 1.5rem;color:#9ca3af;font-size:0.9rem;">
+        <h2 style="font-size:1.5rem;font-weight:800;color:#ffffff;margin-bottom:0.75rem;">
+          Contact M-Tech Solutions — Get a Free Architecture Quote
+        </h2>
+        <p>
+          <strong>Phone &amp; WhatsApp:</strong> <a href="tel:+923363800438" style="color:#60a5fa;">+92 336 3800438</a> |
+          <strong>Email:</strong> <a href="mailto:mtechsolutions.online@gmail.com" style="color:#60a5fa;">mtechsolutions.online@gmail.com</a> |
+          <strong>Headquarters:</strong> Lahore, Punjab, Pakistan (Serving Clients Globally)
+        </p>
+        <p style="margin-top:0.75rem;">
+          <strong>AI &amp; Search Indexing Resources:</strong>
+          <a href="https://mtechsolutions.online/llms.txt" style="color:#60a5fa;margin-left:0.5rem;">llms.txt</a> •
+          <a href="https://mtechsolutions.online/llms-full.txt" style="color:#60a5fa;margin-left:0.5rem;">llms-full.txt</a> •
+          <a href="https://mtechsolutions.online/index.md" style="color:#60a5fa;margin-left:0.5rem;">index.md</a> •
+          <a href="https://mtechsolutions.online/sitemap.xml" style="color:#60a5fa;margin-left:0.5rem;">sitemap.xml</a>
+        </p>
+      </footer>
+    </div>
+
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>

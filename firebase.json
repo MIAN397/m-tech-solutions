@@ -4,18 +4,64 @@
   },
   "hosting": {
     "public": "dist",
+    "cleanUrls": true,
+    "trailingSlash": false,
     "ignore": [
       "firebase.json",
       "**/.*",
+      "!**/.well-known/**",
       "**/node_modules/**"
     ],
     "headers": [
       {
-        "source": "**/*.@(html|json|txt|xml)",
+        "source": "**",
+        "headers": [
+          {
+            "key": "X-Robots-Tag",
+            "value": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+          },
+          {
+            "key": "X-Content-Type-Options",
+            "value": "nosniff"
+          },
+          {
+            "key": "Referrer-Policy",
+            "value": "strict-origin-when-cross-origin"
+          },
+          {
+            "key": "Link",
+            "value": "</llms.txt>; rel=\"llms-txt\", </index.md>; rel=\"alternate\"; type=\"text/markdown\", </sitemap.xml>; rel=\"sitemap\"; type=\"application/xml\""
+          }
+        ]
+      },
+      {
+        "source": "**/*.@(html|json|txt|xml|md)",
         "headers": [
           {
             "key": "Cache-Control",
-            "value": "max-age=0, no-cache, no-store, must-revalidate"
+            "value": "public, max-age=0, must-revalidate"
+          },
+          {
+            "key": "Access-Control-Allow-Origin",
+            "value": "*"
+          }
+        ]
+      },
+      {
+        "source": "/assets/**",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "public, max-age=31536000, immutable"
+          }
+        ]
+      },
+      {
+        "source": "**/*.@(png|jpg|jpeg|gif|webp|svg|ico)",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "public, max-age=86400, stale-while-revalidate=604800"
           }
         ]
       }

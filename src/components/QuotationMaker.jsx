@@ -1,14 +1,14 @@
 import { useState, useEffect, useRef } from 'react';
 import { 
   FileText, Plus, Trash2, Save, Printer, Eye, Copy, ArrowLeft, 
-  Check, RefreshCw, Edit3, DollarSign, Calendar, User, Building, Briefcase, 
-  ChevronDown, ChevronUp, Sparkles, Layers, HelpCircle, FileCheck
+  Check, RefreshCw, DollarSign, User, Building, Briefcase, 
+  ChevronDown, ChevronUp, Layers, FileCheck
 } from 'lucide-react';
 import { db } from '../firebase';
 import { collection, getDocs, setDoc, doc, deleteDoc } from 'firebase/firestore';
 
 // Default initial quotation template (matching user's uploaded PDF exactly)
-export const DEFAULT_QUOTATION_DATA = {
+const DEFAULT_QUOTATION_DATA = {
   id: 'quote_flavour_hub_default',
   quoteNo: 'MTS-2026-001',
   date: 'July 25, 2026',
@@ -134,7 +134,7 @@ export const DEFAULT_QUOTATION_DATA = {
   createdAt: new Date().toISOString()
 };
 
-export default function QuotationMaker({ user }) {
+export default function QuotationMaker() {
   const [quotations, setQuotations] = useState([]);
   const [activeQuote, setActiveQuote] = useState(DEFAULT_QUOTATION_DATA);
   const [viewMode, setViewMode] = useState('editor'); // 'list', 'editor', 'preview'

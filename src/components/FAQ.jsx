@@ -9,27 +9,42 @@ export default function FAQ() {
     {
       question: 'What custom software development services does M-Tech Solutions offer?',
       answer:
-        'We specialize in end-to-end custom software engineering including Wholesale & Retail ERP systems, Mobile POS applications (iOS/Android with offline synchronization), Headless E-Commerce storefronts (Next.js/Shopify), real-time telemetry dashboards, and enterprise API microservices.'
+        'M-Tech Solutions specializes in end-to-end custom software engineering including Wholesale & Retail ERP systems, Offline-First Mobile POS applications (iOS, Android & Desktop with automatic cloud sync), Mobile Parts compatibility & distribution ERPs, Learning Management Systems (LMS) & CBT Examination Portals, Headless E-Commerce storefronts (Next.js/Shopify), real-time telemetry dashboards, and enterprise API microservices.'
     },
     {
-      question: 'How do offline-first POS systems handle internet outages?',
+      question: 'How do M-Tech Solutions offline-first POS systems handle internet outages?',
       answer:
-        'Our mobile POS applications are built using local storage (IndexedDB/SQLite) and dedicated background sync workers. When internet connectivity drops, billing, barcode scanning, and invoice printing continue seamlessly. When connection is restored, transactions reconcile and sync automatically with your central database.'
+        'Our mobile and desktop POS applications are engineered using local-first storage (IndexedDB and SQLite) paired with dedicated background sync workers and deterministic conflict resolution. When internet connectivity drops, barcode scanning, invoice billing, customer ledger updates, and thermal receipt printing continue at 100% speed with zero downtime. Once connectivity returns, queued transactions automatically reconcile and sync with your central cloud database.'
     },
     {
-      question: 'Can your ERP integrate with our existing barcodes, printers, and legacy databases?',
+      question: 'Can your custom ERP integrate with existing barcode scanners, thermal printers, and legacy databases?',
       answer:
-        'Yes. We engineer customized hardware bridges and API adapters that integrate with ESC/POS thermal receipt printers, handheld barcode/2D scanners, electronic cash drawers, and legacy SQL/Excel inventory exports without replacing your current physical infrastructure.'
+        'Yes. We engineer customized hardware bridges (WebUSB, Web Bluetooth, raw TCP/IP socket printing, and serial COM adapters) that integrate seamlessly with 80mm/58mm ESC/POS thermal receipt printers, handheld 1D/2D barcode and QR scanners, electronic cash drawers (RJ11/RJ12), label printers, and legacy SQL/Excel inventory exports without replacing your existing physical hardware.'
     },
     {
-      question: 'What is the typical timeline and process for a custom project?',
+      question: 'What makes your Mobile Parts & Wholesale Distribution ERP unique?',
       answer:
-        'Standard custom platforms are delivered in 2 to 6 weeks depending on feature complexity. Our process includes Discovery & System Architecture, Rapid Interactive Prototyping, Scalable Full-Stack Development, Rigorous Stress Testing, and Final Production Deployment with staff onboarding.'
+        'Our Mobile Parts ERP is purpose-built for electronics and component wholesalers. It features hierarchical categorization for LCD/OLED screens, IC chips, flex cables, and batteries, cross-model compatibility matrices across smartphone generations, IMEI and serial number batch tracking, RMA warranty claim verification, multi-branch stock transfers, landed cost calculation, and tiered B2B/VIP wholesale pricing.'
     },
     {
-      question: 'How can we get a free quotation and architectural consultation?',
+      question: 'Do you build custom Learning Management Systems (LMS) and Computer-Based Testing (CBT) portals?',
       answer:
-        'You can reach us directly on WhatsApp (+92 336 3800438), call our direct line, or send an email inquiry through our contact form. We provide a detailed scope analysis, tech stack recommendation, and fixed milestone pricing at zero upfront cost.'
+        'Yes. We have engineered and deployed production academic platforms such as the Cadets Coaching Academy LMS and the CCA Examination & Testing Portal, supporting 15,000+ concurrent student sessions, timed MCQ exam simulators, automated instant grading, cohort management, and multi-role faculty administration.'
+    },
+    {
+      question: 'What technology stack does M-Tech Solutions use for enterprise web and mobile apps?',
+      answer:
+        'We build with modern, battle-tested technologies: React 19, Next.js, TypeScript, Tailwind CSS, and GSAP for sub-second frontends; React Native and Flutter for cross-platform mobile apps; and Node.js, Express, Firebase (Firestore, Realtime DB, Auth, Hosting), PostgreSQL, and MongoDB for high-throughput, zero-trust cloud backends.'
+    },
+    {
+      question: 'What is the typical delivery timeline and pricing model for a custom software project?',
+      answer:
+        'Standard custom platforms are delivered in 2 to 6 weeks depending on module complexity. We follow an agile milestone workflow: 1) Discovery & System Architecture, 2) Interactive UI/UX Prototyping, 3) Full-Stack Sprint Engineering, 4) Stress Testing & Hardware Verification, and 5) Production Deployment with staff training. All projects use transparent, fixed-milestone pricing with zero hidden fees.'
+    },
+    {
+      question: 'How can we get a free quotation and architectural consultation from M-Tech Solutions?',
+      answer:
+        'You can message or call us directly on WhatsApp at +92 336 3800438, email mtechsolutions.online@gmail.com, or click "Start Your Project" on our website (https://mtechsolutions.online/). Our principal software architect Tuaha Afzal provides a comprehensive scope analysis, database architecture recommendation, and fixed-milestone quotation at zero upfront cost.'
     }
   ];
 
@@ -75,10 +90,11 @@ export default function FAQ() {
                   onClick={() => toggleFaq(index)}
                   className="w-full text-left p-5 sm:p-6 flex items-center justify-between gap-4 transition-colors"
                   aria-expanded={isOpen}
+                  aria-controls={`faq-answer-${index}`}
                 >
-                  <span className="font-display font-bold text-sm sm:text-base md:text-lg text-text-main pr-2">
+                  <h3 className="font-display font-bold text-sm sm:text-base md:text-lg text-text-main pr-2">
                     {faq.question}
-                  </span>
+                  </h3>
                   <div
                     className={`p-2 rounded-xl border border-border-main shrink-0 transition-transform duration-300 ${
                       isOpen ? 'rotate-180 bg-accent text-white border-accent' : 'bg-white/5 text-accent-silver'
@@ -88,11 +104,15 @@ export default function FAQ() {
                   </div>
                 </button>
 
-                {isOpen && (
-                  <div className="px-5 sm:px-6 pb-6 pt-1 text-accent-silver text-xs sm:text-sm md:text-base leading-relaxed border-t border-white/5 animate-in fade-in slide-in-from-top-2 duration-300">
-                    <p>{faq.answer}</p>
-                  </div>
-                )}
+                <div
+                  id={`faq-answer-${index}`}
+                  hidden={!isOpen}
+                  className={`px-5 sm:px-6 pb-6 pt-1 text-accent-silver text-xs sm:text-sm md:text-base leading-relaxed border-t border-white/5 ${
+                    isOpen ? 'block animate-in fade-in slide-in-from-top-2 duration-300' : 'hidden'
+                  }`}
+                >
+                  <p>{faq.answer}</p>
+                </div>
               </div>
             );
           })}

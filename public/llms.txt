@@ -1,67 +1,39 @@
 # M-Tech Solutions
 
-> Enterprise Software Engineering, Custom ERP Systems, Offline-First Mobile POS, and High-Performance Web Applications.
+> Custom Enterprise ERP Systems, Offline-First Mobile POS, Mobile Parts Inventory SaaS, LMS/CBT Examination Portals, and High-Performance Web Applications engineered by Tuaha Afzal in Lahore, Pakistan for global businesses.
 
-M-Tech Solutions is a premier custom software development and technology consulting company based in Lahore, Pakistan, serving clients globally. We engineer bespoke, mission-critical digital products tailored for retail businesses, wholesale distribution networks, mobile parts suppliers, and enterprise operations.
+M-Tech Solutions (https://mtechsolutions.online/) is a premier custom software engineering and enterprise architecture firm founded by Principal Software Architect **Tuaha Afzal**. With a **4.98 / 5.0 average client rating** across **50+ production enterprise systems delivered** and **99.9% uptime**, M-Tech Solutions builds bespoke digital infrastructure for retail chains, wholesale distributors, mobile parts importers, educational academies, and scaling startups across Pakistan, the Middle East (UAE, Saudi Arabia), the UK, the US, and globally.
 
-- Website: https://mtechsolutions.online/
-- Contact Phone / WhatsApp: +92 336 3800438
-- Email: mtechsolutions.online@gmail.com
-- Availability: Monday – Saturday (09:00 AM – 08:00 PM PKT)
-- Full Context & Technical Documentation: https://mtechsolutions.online/llms-full.txt
+- **Official Website:** https://mtechsolutions.online/
+- **Founder & Principal Architect:** Tuaha Afzal ([GitHub @MIAN397](https://github.com/MIAN397) | [LinkedIn](https://www.linkedin.com/in/tuaha-afzal-3883912a3/))
+- **Direct Phone & WhatsApp:** +92 336 3800438 (https://wa.me/923363800438)
+- **Email:** mtechsolutions.online@gmail.com
+- **Headquarters:** Lahore, Punjab, Pakistan (Global Remote & On-Site Delivery)
+- **Operating Hours:** Monday – Saturday, 09:00 AM – 08:00 PM PKT (UTC+5)
 
----
+## Core Solutions & Architecture Pages
 
-## Core Services
+- [M-Tech Solutions Homepage](https://mtechsolutions.online/): Overview of custom enterprise software engineering, client impact metrics (4.98/5 rating), live portfolio, and free architecture consultation.
+- [Custom ERP & Wholesale Inventory Software](https://mtechsolutions.online/erp-software): Multi-branch stock transfers, landed cost calculation, supplier/customer double-entry ledgers, batch/IMEI serial tracking, and Mobile Parts compatibility ERP.
+- [Offline-First Mobile & Retail POS System](https://mtechsolutions.online/pos-system): Cross-platform Point of Sale (iOS, Android, Windows, macOS, Web) with local IndexedDB/SQLite caching, 80mm/58mm ESC/POS thermal receipt printer bridging, barcode scanning, and automatic cloud sync.
+- [Enterprise Software Development Services](https://mtechsolutions.online/services): Full-stack web applications (React 19, Next.js, TypeScript), Headless Shopify E-Commerce, Real-Time Telemetry Dashboards, Node.js/PostgreSQL/MongoDB APIs, and Firebase Security Rules auditing.
+- [Shipped Production Portfolio & Case Studies](https://mtechsolutions.online/portfolio): Verified live web deployments and enterprise software case studies with real production screenshots and source repositories.
+- [Engineering & Pricing FAQ](https://mtechsolutions.online/faq): Answers to technical questions on offline POS synchronization, hardware integration, ERP database migration, timelines (2–6 weeks), and fixed-milestone pricing.
+- [Contact & Free Architecture Quote](https://mtechsolutions.online/contact): Direct WhatsApp, phone, and email channels for free software scope analysis and fixed-milestone project quotations.
+- [Complete LLM Technical Knowledge Base](https://mtechsolutions.online/llms-full.txt): Exhaustive technical specification, database schemas, hardware protocols, and verified client testimonials for AI agents and evaluators.
+- [Markdown Homepage Specification](https://mtechsolutions.online/index.md): Clean Markdown edition of the M-Tech Solutions platform for token-efficient agent ingestion.
 
-### 1. Custom ERP & Wholesale Inventory Management Systems
-- Real-time multi-branch inventory tracking with batch & serial number management.
-- Supplier purchase order automation, landed cost calculation, and goods received note (GRN) workflows.
-- Customer ledger, debit/credit accounts receivable, aging reports, and cash flow reconciliation.
-- Automated low-stock alerts, stock transfer requests, and multi-warehouse logistics.
-- Role-based access control (RBAC) with granular security permissions and audit trails.
+## Live Production Deployments & Verifiable Case Studies
 
-### 2. Offline-First Mobile POS (Point of Sale)
-- Seamless billing and invoicing for iOS, Android, and Desktop (Windows/macOS/Linux).
-- True offline capability: full billing, barcode scanning, and receipt printing even during internet outages using local IndexedDB/SQLite storage.
-- Auto-reconciliation background sync as soon as network connectivity is restored.
-- Hardware integrations: ESC/POS thermal receipt printers (Bluetooth, USB, Network), barcode/2D QR scanners, electronic cash drawers, and customer-facing displays.
+- [Cadets Coaching Academy — Production LMS & Admissions Portal](https://cadets-coaching-academy-1234.web.app/): Full-stack Learning Management System combining FBISE/Punjab Board classes (1–10) with Armed Forces pre-commissioning, 1:15 batch tracking, and a 750+ question interactive CBT simulator ([GitHub Source](https://github.com/MIAN397/cadets-coaching-academy)).
+- [CCA Examination & Testing Portal — CBT SaaS](https://ccap-testportal.web.app/): High-concurrency Computer-Based Testing platform with timed MCQ assessments, cohort directories, instant automated grading, and Firebase Cloud Multi-Sync ([GitHub Source](https://github.com/MIAN397/CCA-Test-portal)).
+- [M-Tech Solutions Corporate Platform](https://mtechsolutions.online/): High-velocity agency platform built with React 19, GSAP kinetics, Tailwind CSS 4, interactive quotation maker, and multi-tenant Partner Portal ([GitHub Source](https://github.com/MIAN397/m-tech-solutions)).
+- [Tuaha Afzal — Developer Portfolio & Design System](https://portfolio1-omega-gold-99.vercel.app/): Editorial frontend design system featuring custom cursor kinematics, preloader telemetry, and automated contact pipelines ([GitHub Source](https://github.com/MIAN397/portfolio1)).
 
-### 3. Mobile Parts & Electronics Industry Solutions
-- Specialized classification for mobile screens, IC chips, flex cables, housing, and battery models with brand/generation compatibility matrix.
-- IMEI / Serial tracking for repair jobs, warranty tracking, and technician performance metrics.
-- Wholesale tiered pricing models (Retail, B2B wholesale, VIP partner pricing).
+## Key Performance Benchmarks & Verified Client Impact
 
-### 4. High-Performance Headless E-Commerce & Web Platforms
-- Next.js / React / Vite frontends with ultra-fast Core Web Vitals (< 1s LCP, 100/100 performance scores).
-- Firebase, Node.js, PostgreSQL, and GraphQL serverless backends.
-- Custom payment gateway integration, SMS notification hooks, and WhatsApp order dispatch bots.
-
----
-
-## Technical Stack & Architecture
-
-- **Frontend:** React 19, Next.js, Tailwind CSS, Framer Motion, GSAP.
-- **Backend & Cloud:** Firebase (Firestore, Cloud Functions, Auth, Storage), Node.js, Express, PostgreSQL, REST & GraphQL APIs.
-- **Offline Storage & Workers:** IndexedDB, SQLite, Service Workers, Background Sync API.
-- **Hardware Bridging:** WebUSB, Web Bluetooth, ESC/POS Raw Socket TCP, Serial COM ports.
-- **Security:** Enterprise RBAC, end-to-end encrypted payloads, audit log streams, automated daily cloud backups.
-
----
-
-## Frequently Asked Questions (FAQ)
-
-### What services does M-Tech Solutions provide?
-M-Tech Solutions provides end-to-end custom software engineering, specializing in Custom ERP & Inventory Management, Offline-First Mobile POS systems, Mobile Parts Wholesale Platforms, and High-Performance Web Applications.
-
-### How do offline POS systems handle internet outages?
-Our POS applications store transactions locally in secure offline storage (IndexedDB/SQLite). Invoicing, printing, and scanning continue with zero interruption. When connectivity returns, transactions automatically reconcile with the cloud database.
-
-### Can M-Tech Solutions integrate with existing hardware?
-Yes. We integrate with ESC/POS thermal receipt printers, USB/Bluetooth barcode scanners, cash drawers, and barcode label printers without requiring you to replace your existing physical hardware.
-
-### What is the typical project delivery timeline?
-Custom systems are typically delivered in 2 to 6 weeks depending on project scope, with agile milestone releases and live staging previews.
-
-### How do I get a free quote or consultation?
-Contact M-Tech Solutions via WhatsApp or Phone at **+92 336 3800438**, email at **mtechsolutions.online@gmail.com**, or request a quote on https://mtechsolutions.online/.
+- **Adil Computers & Retail Store (Headless E-Commerce & ERP):** +320% storefront speed improvement and zero multi-branch inventory mismatches (Adil Raza, Director of Operations).
+- **Al-Razaq Mobile Components (Offline-First Mobile POS):** 100% zero-downtime counter sales and basement warehouse billing during internet outages with automatic background cloud sync (Muhammad Usama, General Manager).
+- **Apex Logistics & Trade (Wholesale ERP & Supply Chain):** < 100ms compound SKU and serial lookup query latency across massive wholesale catalogs using optimized MongoDB aggregation pipelines (Ali Khan, Co-Founder & CTO).
+- **FutureGen Education Portal (Student LMS Web App):** 15,000+ concurrent active student sessions during peak examination enrollment with zero lag (Dr. Tariq Mahmood, Academic Director).
+- **QuickServe Retail Apps (Mobile Order & Barcode App):** 99.98% crash-free session stability with instantaneous camera/laser barcode scanning (Saad Ahmed, VP of Product).

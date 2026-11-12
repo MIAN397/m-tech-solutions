@@ -129,8 +129,8 @@ export default function Hero() {
 
       <div className="relative z-10 w-full max-w-6xl flex flex-col items-center text-center mt-4 sm:mt-8 md:mt-12">
         {/* Social Proof Rating Badge */}
-        <div className="hero-subhead inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/5 border border-border-main backdrop-blur-md mb-6 shadow-sm opacity-0">
-          <div className="flex items-center gap-0.5">
+        <div className="hero-subhead inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/5 border border-border-main backdrop-blur-md mb-4 shadow-sm">
+          <div className="flex items-center gap-0.5" aria-label="4.98 out of 5 stars">
             {[...Array(5)].map((_, i) => (
               <Star key={i} className="w-3.5 h-3.5 fill-amber-400 text-amber-400" />
             ))}
@@ -140,24 +140,28 @@ export default function Hero() {
           <span className="text-xs font-semibold text-accent">50+ Enterprise Systems Delivered</span>
         </div>
 
-        {/* Massive Typography Headers */}
-        <h1 className="font-display font-extrabold tracking-tight text-text-main flex flex-col gap-1 md:gap-3 leading-tight sm:leading-none select-none text-[11vw] sm:text-[9vw] lg:text-[7.5vw] uppercase">
-          <span className="overflow-hidden block py-0.5 sm:py-1">
-            <span className="hero-title-line inline-block">We Shape</span>
+        {/* Massive Typography Headers with Keyword-Rich H1 */}
+        <h1 className="flex flex-col items-center">
+          <span className="hero-subhead font-display text-[10px] sm:text-xs md:text-sm font-bold tracking-widest text-accent uppercase mb-3 sm:mb-4 px-3 py-1 rounded-full bg-accent/10 border border-accent/20">
+            M-Tech Solutions — Custom Enterprise ERP, Offline Mobile POS &amp; Web Apps
           </span>
-          <span className="overflow-hidden block py-0.5 sm:py-1 text-gradient-accent">
-            <span className="hero-title-line inline-block">Digital Leaders</span>
+          <span className="font-display font-extrabold tracking-tight text-text-main flex flex-col gap-1 md:gap-3 leading-tight sm:leading-none select-none text-[11vw] sm:text-[9vw] lg:text-[7.5vw] uppercase">
+            <span className="overflow-hidden block py-0.5 sm:py-1">
+              <span className="hero-title-line inline-block">We Shape</span>
+            </span>
+            <span className="overflow-hidden block py-0.5 sm:py-1 text-gradient-accent">
+              <span className="hero-title-line inline-block">Digital Leaders</span>
+            </span>
           </span>
         </h1>
 
         {/* Supporting Subtitle */}
-        <p className="hero-subhead max-w-xl md:max-w-2xl text-accent-silver text-sm sm:text-base md:text-xl font-medium tracking-wide mt-4 sm:mt-6 md:mt-8 leading-relaxed opacity-0">
-          M-Tech Solutions scales businesses by building high-performance, custom digital products.
-          From enterprise POS &amp; Inventory ERP architectures to premium web &amp; mobile platforms.
+        <p className="hero-subhead max-w-xl md:max-w-2xl text-accent-silver text-sm sm:text-base md:text-xl font-medium tracking-wide mt-4 sm:mt-6 md:mt-8 leading-relaxed">
+          M-Tech Solutions scales businesses globally by engineering high-performance custom software—from multi-branch Wholesale Inventory ERPs, Mobile Parts SaaS, and Offline-First Mobile POS (iOS, Android &amp; Desktop) to Next.js Headless E-Commerce and Learning Management Portals.
         </p>
 
         {/* High Conversion Dual Action Buttons */}
-        <div className="hero-scroll-cta mt-8 sm:mt-10 md:mt-12 flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto opacity-0">
+        <div className="hero-scroll-cta mt-8 sm:mt-10 md:mt-12 flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto">
           <a
             href="#contact"
             ref={primaryBtnRef}
@@ -184,7 +188,7 @@ export default function Hero() {
         </div>
 
         {/* Subtle Scroll Indicator */}
-        <div className="hero-scroll-cta mt-10 md:mt-14 opacity-0 flex flex-col items-center">
+        <div className="hero-scroll-cta mt-10 md:mt-14 flex flex-col items-center">
           <a
             href="#about"
             ref={scrollBtnRef}

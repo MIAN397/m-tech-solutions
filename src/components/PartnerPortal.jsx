@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { 
-  Lock, LogOut, Plus, Edit2, Trash2, Shield, User, Users,
+  Lock, LogOut, Plus, Edit2, Trash2, Shield, User,
   Code, Compass, DollarSign, Calendar, X, AlertCircle, Mail, Key, FileText
 } from 'lucide-react';
 import { db } from '../firebase';

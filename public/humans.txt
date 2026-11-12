@@ -1,0 +1,17 @@
+/* TEAM */
+Founder & Principal Software Architect: Tuaha Afzal (Mian Tuaha Afzal)
+Organization: M-Tech Solutions
+Website: https://mtechsolutions.online/
+GitHub: https://github.com/MIAN397
+LinkedIn: https://www.linkedin.com/in/tuaha-afzal-3883912a3/
+Instagram: https://www.instagram.com/mtechsolutions.online/
+Contact: +92 336 3800438 / mtechsolutions.online@gmail.com
+Location: Lahore, Punjab, Pakistan
+
+/* SITE */
+Last update: 2026-11-12
+Language: English
+Standards: HTML5, CSS3, ES2024, JSON-LD Schema.org, OpenGraph, llms.txt
+Components: React 19, Vite 8, Tailwind CSS 4, GSAP, Framer Motion, Firebase
+AI & LLM Documentation: https://mtechsolutions.online/llms.txt
+Full Specification: https://mtechsolutions.online/llms-full.txt

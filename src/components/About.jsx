@@ -21,7 +21,7 @@ export default function About() {
     const wordSpans = [];
     words.forEach((word) => {
       const span = document.createElement('span');
-      span.className = 'inline-block opacity-15 transition-all duration-300';
+      span.className = 'inline-block opacity-60 transition-all duration-300';
       span.textContent = word;
 
       // Add a space between words

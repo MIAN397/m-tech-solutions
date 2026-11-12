@@ -1,19 +1,120 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <!-- Primary Homepage -->
   <url>
     <loc>https://mtechsolutions.online/</loc>
-    <lastmod>2026-08-23</lastmod>
+    <lastmod>2026-11-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
       <image:loc>https://mtechsolutions.online/og-image.jpg</image:loc>
-      <image:title>M-Tech Solutions Custom Enterprise Systems &amp; Web Apps</image:title>
-      <image:caption>High performance custom digital products, POS, and ERP inventory platforms engineered by M-Tech Solutions</image:caption>
+      <image:title>M-Tech Solutions — Custom Enterprise ERP, Offline Mobile POS &amp; Web Apps</image:title>
+      <image:caption>High-performance custom enterprise ERP, offline-first mobile POS, and Next.js web applications engineered by M-Tech Solutions</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://mtechsolutions.online/logo_transparent.png</image:loc>
       <image:title>M-Tech Solutions Official Logo</image:title>
     </image:image>
+    <image:image>
+      <image:loc>https://mtechsolutions.online/cca_live_screenshot.png</image:loc>
+      <image:title>Cadets Coaching Academy LMS Portal by M-Tech Solutions</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mtechsolutions.online/cca_test_portal_screenshot.png</image:loc>
+      <image:title>CCA Examination &amp; CBT Testing Portal by M-Tech Solutions</image:title>
+    </image:image>
+  </url>
+
+  <!-- Dedicated Solution Page: Custom ERP & Mobile Parts Wholesale Inventory -->
+  <url>
+    <loc>https://mtechsolutions.online/erp-software</loc>
+    <lastmod>2026-11-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+    <image:image>
+      <image:loc>https://mtechsolutions.online/og-image.jpg</image:loc>
+      <image:title>Custom ERP &amp; Wholesale Inventory Management Software — M-Tech Solutions</image:title>
+    </image:image>
+  </url>
+
+  <!-- Dedicated Solution Page: Offline-First Mobile & Retail POS System -->
+  <url>
+    <loc>https://mtechsolutions.online/pos-system</loc>
+    <lastmod>2026-11-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+    <image:image>
+      <image:loc>https://mtechsolutions.online/og-image.jpg</image:loc>
+      <image:title>Offline-First Mobile &amp; Retail POS System — M-Tech Solutions</image:title>
+    </image:image>
+  </url>
+
+  <!-- Dedicated Page: Enterprise Software Engineering Services -->
+  <url>
+    <loc>https://mtechsolutions.online/services</loc>
+    <lastmod>2026-11-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Dedicated Page: Live Portfolio & Case Studies -->
+  <url>
+    <loc>https://mtechsolutions.online/portfolio</loc>
+    <lastmod>2026-11-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://mtechsolutions.online/cca_live_screenshot.png</image:loc>
+      <image:title>Cadets Coaching Academy Production LMS Screenshot</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mtechsolutions.online/cca_test_portal_screenshot.png</image:loc>
+      <image:title>CCA Computer-Based Testing (CBT) Portal Screenshot</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mtechsolutions.online/mtech_solutions_screenshot.png</image:loc>
+      <image:title>M-Tech Solutions Enterprise Web Platform Screenshot</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mtechsolutions.online/portfolio_v1_screenshot.png</image:loc>
+      <image:title>Tuaha Afzal Developer Portfolio Screenshot</image:title>
+    </image:image>
+  </url>
+
+  <!-- Dedicated Page: Engineering & Pricing FAQ -->
+  <url>
+    <loc>https://mtechsolutions.online/faq</loc>
+    <lastmod>2026-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- Dedicated Page: Contact & Free Software Quotation -->
+  <url>
+    <loc>https://mtechsolutions.online/contact</loc>
+    <lastmod>2026-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- Machine-Readable AI & LLM Context Files -->
+  <url>
+    <loc>https://mtechsolutions.online/llms.txt</loc>
+    <lastmod>2026-11-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mtechsolutions.online/llms-full.txt</loc>
+    <lastmod>2026-11-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mtechsolutions.online/index.md</loc>
+    <lastmod>2026-11-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
 </urlset>

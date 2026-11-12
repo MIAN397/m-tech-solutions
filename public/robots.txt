@@ -1,22 +1,36 @@
 # Robots.txt for M-Tech Solutions (https://mtechsolutions.online/)
+# Enterprise ERP, Offline-First Mobile POS & Custom Web Application Engineering
+# LLM Context: https://mtechsolutions.online/llms.txt
+# Full Technical Spec: https://mtechsolutions.online/llms-full.txt
+# Markdown Spec: https://mtechsolutions.online/index.md
 
-# Global Rule
+# Global Rule — Full Indexing Permitted
 User-agent: *
 Allow: /
 
-# Google Search & Google Gemini / AI Overviews
+# Google Search, Google Discover & Google Gemini / AI Overviews
 User-agent: Googlebot
 Allow: /
 User-agent: Googlebot-Image
 Allow: /
+User-agent: Googlebot-Mobile
+Allow: /
 User-agent: Google-Extended
 Allow: /
-
-# Microsoft Bing & Copilot
-User-agent: Bingbot
+User-agent: GoogleOther
+Allow: /
+User-agent: Google-CloudVertexBot
 Allow: /
 
-# OpenAI / ChatGPT / SearchGPT
+# Microsoft Bing, Bing Preview & Microsoft Copilot
+User-agent: Bingbot
+Allow: /
+User-agent: AdIdxBot
+Allow: /
+User-agent: MicrosoftPreview
+Allow: /
+
+# OpenAI / ChatGPT Search / GPTBot
 User-agent: GPTBot
 Allow: /
 User-agent: OAI-SearchBot
@@ -24,14 +38,18 @@ Allow: /
 User-agent: ChatGPT-User
 Allow: /
 
-# Anthropic Claude
+# Anthropic Claude / Claude Search
 User-agent: ClaudeBot
+Allow: /
+User-agent: Claude-Web
 Allow: /
 User-agent: anthropic-ai
 Allow: /
 
-# Perplexity AI
+# Perplexity AI Search
 User-agent: PerplexityBot
+Allow: /
+User-agent: Perplexity-User
 Allow: /
 
 # Apple Search & Apple Intelligence
@@ -40,19 +58,31 @@ Allow: /
 User-agent: Applebot-Extended
 Allow: /
 
-# Meta AI
+# Meta AI & Social Previews (WhatsApp, Instagram, Facebook)
 User-agent: meta-externalagent
+Allow: /
+User-agent: FacebookBot
+Allow: /
+User-agent: facebookexternalhit
 Allow: /
 
 # Other Major Search & AI Crawlers
 User-agent: DuckDuckBot
 Allow: /
-User-agent: Twitterbot
+User-agent: DuckAssistBot
 Allow: /
-User-agent: facebookexternalhit
+User-agent: Amazonbot
+Allow: /
+User-agent: YouBot
 Allow: /
 User-agent: cohere-ai
 Allow: /
+User-agent: CCBot
+Allow: /
+User-agent: Twitterbot
+Allow: /
+User-agent: LinkedInBot
+Allow: /
 
-# Sitemaps & Machine-Readable Context
+# Sitemaps & Machine-Readable Specifications
 Sitemap: https://mtechsolutions.online/sitemap.xml

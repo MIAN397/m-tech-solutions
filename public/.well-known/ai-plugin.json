@@ -1,0 +1,17 @@
+{
+  "schema_version": "v1",
+  "name_for_human": "M-Tech Solutions",
+  "name_for_model": "mtech_solutions",
+  "description_for_human": "Custom Enterprise ERP, Offline-First Mobile POS, Mobile Parts Inventory SaaS, LMS Portals, and Next.js Web Application Development.",
+  "description_for_model": "Official knowledge base and service catalog for M-Tech Solutions (https://mtechsolutions.online/), founded by Principal Software Architect Tuaha Afzal in Lahore, Pakistan. Provides architectural specifications, live case studies, pricing timelines, and contact channels for Custom ERP systems, Offline-First Mobile POS (iOS/Android/Desktop with ESC/POS thermal printer bridging), Mobile Parts Wholesale ERPs, LMS/CBT Examination Portals, and Headless Next.js E-Commerce.",
+  "auth": {
+    "type": "none"
+  },
+  "api": {
+    "type": "llms-txt",
+    "url": "https://mtechsolutions.online/llms-full.txt"
+  },
+  "logo_url": "https://mtechsolutions.online/favicon-512x512.png",
+  "contact_email": "mtechsolutions.online@gmail.com",
+  "legal_info_url": "https://mtechsolutions.online/"
+}

@@ -122,17 +122,120 @@ export default function Footer() {
           </div>
         </div>
 
+        {/* SEO Architecture & Sitemap Links Bar */}
+        <div className="py-8 border-t border-border-main/60 grid grid-cols-2 sm:grid-cols-4 gap-6 text-xs">
+          <div className="flex flex-col gap-2">
+            <span className="font-display font-bold text-text-main uppercase tracking-wider text-[11px]">
+              Core Solutions
+            </span>
+            <a href="/erp-software" className="text-accent-silver hover:text-accent transition-colors">
+              Custom ERP &amp; Inventory Software
+            </a>
+            <a href="/pos-system" className="text-accent-silver hover:text-accent transition-colors">
+              Offline-First Mobile POS
+            </a>
+            <a href="/services" className="text-accent-silver hover:text-accent transition-colors">
+              Mobile Parts Wholesale ERP
+            </a>
+            <a href="/services" className="text-accent-silver hover:text-accent transition-colors">
+              Headless E-Commerce &amp; Web Apps
+            </a>
+          </div>
+
+          <div className="flex flex-col gap-2">
+            <span className="font-display font-bold text-text-main uppercase tracking-wider text-[11px]">
+              Live Case Studies
+            </span>
+            <a href="https://cadets-coaching-academy-1234.web.app/" target="_blank" rel="noopener noreferrer" className="text-accent-silver hover:text-accent transition-colors">
+              Cadets Coaching Academy LMS
+            </a>
+            <a href="https://ccap-testportal.web.app/" target="_blank" rel="noopener noreferrer" className="text-accent-silver hover:text-accent transition-colors">
+              CCA CBT Examination Portal
+            </a>
+            <a href="/portfolio" className="text-accent-silver hover:text-accent transition-colors">
+              Enterprise Portfolio &amp; Demos
+            </a>
+            <a href="https://github.com/MIAN397" target="_blank" rel="noopener noreferrer" className="text-accent-silver hover:text-accent transition-colors">
+              Open Source &amp; GitHub Repos
+            </a>
+          </div>
+
+          <div className="flex flex-col gap-2">
+            <span className="font-display font-bold text-text-main uppercase tracking-wider text-[11px]">
+              Company &amp; Support
+            </span>
+            <a href="#about" className="text-accent-silver hover:text-accent transition-colors">
+              About M-Tech Solutions
+            </a>
+            <a href="#reviews" className="text-accent-silver hover:text-accent transition-colors">
+              Verified Client Reviews (4.98/5)
+            </a>
+            <a href="/faq" className="text-accent-silver hover:text-accent transition-colors">
+              Engineering &amp; Pricing FAQ
+            </a>
+            <a href="/contact" className="text-accent-silver hover:text-accent transition-colors">
+              Request Free Project Quote
+            </a>
+          </div>
+
+          <div className="flex flex-col gap-2">
+            <span className="font-display font-bold text-text-main uppercase tracking-wider text-[11px]">
+              AI &amp; Search Indexing
+            </span>
+            <a href="/llms.txt" className="text-accent-silver hover:text-accent transition-colors">
+              LLM Context (llms.txt)
+            </a>
+            <a href="/llms-full.txt" className="text-accent-silver hover:text-accent transition-colors">
+              Full Technical Spec (llms-full.txt)
+            </a>
+            <a href="/index.md" className="text-accent-silver hover:text-accent transition-colors">
+              Markdown Specification (index.md)
+            </a>
+            <a href="/sitemap.xml" className="text-accent-silver hover:text-accent transition-colors">
+              XML Sitemap
+            </a>
+          </div>
+        </div>
+
         {/* Footer Sub-Bar */}
         <div className="pt-8 border-t border-border-main flex flex-col sm:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-3">
             <Logo iconClassName="w-5 h-5 sm:w-6 sm:h-6" />
             <p className="text-[11px] sm:text-xs font-semibold text-accent-silver">
-              &copy; {currentYear} M-Tech Solutions. All rights reserved.
+              &copy; {currentYear} M-Tech Solutions. Engineered by Tuaha Afzal in Lahore, Pakistan for Global Enterprises.
             </p>
           </div>
 
           {/* Social Links */}
           <div className="flex items-center gap-3">
+            {/* GitHub Link */}
+            <a
+              href="https://github.com/MIAN397"
+              target="_blank"
+              rel="noopener noreferrer"
+              data-cursor="magnetic"
+              aria-label="GitHub Profile"
+              className="p-2.5 sm:p-3 bg-white/5 border border-border-main rounded-full text-accent-silver hover:text-text-main hover:bg-accent/10 hover:border-accent transition-all duration-300"
+            >
+              <svg className="w-4 h-4 sm:w-5 sm:h-5 fill-current" viewBox="0 0 24 24">
+                <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+              </svg>
+            </a>
+
+            {/* LinkedIn Link */}
+            <a
+              href="https://www.linkedin.com/in/tuaha-afzal-3883912a3/"
+              target="_blank"
+              rel="noopener noreferrer"
+              data-cursor="magnetic"
+              aria-label="LinkedIn"
+              className="p-2.5 sm:p-3 bg-white/5 border border-border-main rounded-full text-accent-silver hover:text-text-main hover:bg-accent/10 hover:border-accent transition-all duration-300"
+            >
+              <svg className="w-4 h-4 sm:w-5 sm:h-5 fill-current" viewBox="0 0 24 24">
+                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+              </svg>
+            </a>
+
             {/* Instagram Link */}
             <a
               href="https://www.instagram.com/mtechsolutions.online/"
@@ -147,16 +250,16 @@ export default function Footer() {
               </svg>
             </a>
 
-            {/* Facebook Link */}
+            {/* WhatsApp Direct Link */}
             <a
-              href="#"
+              href="https://wa.me/923363800438"
+              target="_blank"
+              rel="noopener noreferrer"
               data-cursor="magnetic"
-              aria-label="Facebook"
+              aria-label="WhatsApp Business"
               className="p-2.5 sm:p-3 bg-white/5 border border-border-main rounded-full text-accent-silver hover:text-text-main hover:bg-accent/10 hover:border-accent transition-all duration-300"
             >
-              <svg className="w-4 h-4 sm:w-5 sm:h-5 fill-current" viewBox="0 0 24 24">
-                <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z" />
-              </svg>
+              <MessageCircle className="w-4 h-4 sm:w-5 sm:h-5" />
             </a>
           </div>
         </div>

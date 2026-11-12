@@ -1,0 +1,5 @@
+Contact: mailto:mtechsolutions.online@gmail.com
+Contact: tel:+923363800438
+Canonical: https://mtechsolutions.online/.well-known/security.txt
+Preferred-Languages: en, ur
+Expires: 2027-12-31T23:59:59.000Z
